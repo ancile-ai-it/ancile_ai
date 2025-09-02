@@ -1,76 +1,159 @@
-import { Target, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+"use client";
+import { Target, Mail, Phone, MapPin, Linkedin, Twitter, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-br from-slate-50 via-gray-50 to-white text-gray-900 relative overflow-hidden border-t border-slate-200">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="bg-gradient-to-br from-blue-800 to-blue-900 p-2 rounded-lg">
-                <Target className="h-8 w-8 text-white" />
+            <div className="flex items-center space-x-3 mb-6 group">
+              <div className="bg-gradient-to-br from-blue-600 to-slate-700 p-3 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+                <Target className="h-8 w-8 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">PCRM</h3>
-                <p className="text-sm text-gray-400">Consulting & Solutions</p>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">Ancile AI</h3>
+                <p className="text-sm text-gray-600 font-medium">Consulting & Solutions</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Veteran-founded AI consulting for government agencies. The PCRM team of former US Marine and Air Force
-              veterans delivers mission-critical AI solutions with unmatched understanding of defense and intelligence operations.
+
+            <p className="text-gray-700 mb-8 leading-relaxed max-w-md text-lg">
+              Veteran-founded AI consulting for government agencies. Transforming critical missions with
+              cutting-edge AI solutions and unparalleled domain expertise.
             </p>
+
+            {/* Enhanced Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors">
-                <Linkedin className="h-5 w-5" />
+              <a
+                href="#"
+                className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
+              >
+                <Linkedin className="h-5 w-5 text-slate-700 group-hover:text-slate-800 transition-colors" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a
+                href="#"
+                className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
+              >
+                <Twitter className="h-5 w-5 text-slate-700 group-hover:text-slate-800 transition-colors" />
+              </a>
+              <a
+                href="#"
+                className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
+              >
+                <Mail className="h-5 w-5 text-slate-700 group-hover:text-slate-800 transition-colors" />
               </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#services" className="hover:text-white transition-colors">AI Strategy</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Solution Architecture</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Implementation</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Optimization</a></li>
+            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">Services</h4>
+            <ul className="space-y-3">
+              {[
+                'AI Strategy & Planning',
+                'Solution Architecture',
+                'Platform Implementation',
+                'Performance Optimization',
+                'Security Integration'
+              ].map((service, index) => (
+                <li key={index}>
+                  <a
+                    href="#services"
+                    className="text-gray-700 hover:text-slate-800 text-base transition-all duration-300 hover:translate-x-1 inline-block group"
+                  >
+                    {service}
+                    <span className="inline-block ml-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Contact</h4>
-            <div className="space-y-3 text-gray-300">
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span className="text-sm">contact@pcrmconsulting.com</span>
+            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">Contact</h4>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3 group">
+                <div className="bg-slate-100 p-2 rounded-lg group-hover:bg-slate-200 transition-colors">
+                  <Mail className="h-4 w-4 text-slate-700" />
+                </div>
+                <span className="text-gray-700 text-base group-hover:text-slate-800 transition-colors">contact@ancile.ai</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4" />
-                <span className="text-sm">(555) 123-4567</span>
+              <div className="flex items-center space-x-3 group">
+                <div className="bg-slate-100 p-2 rounded-lg group-hover:bg-slate-200 transition-colors">
+                  <Phone className="h-4 w-4 text-slate-700" />
+                </div>
+                <span className="text-gray-700 text-base group-hover:text-slate-800 transition-colors">(555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4" />
-                <span className="text-sm">Dallas-Fort Worth, Texas</span>
+              <div className="flex items-center space-x-3 group">
+                <div className="bg-slate-100 p-2 rounded-lg group-hover:bg-slate-200 transition-colors">
+                  <MapPin className="h-4 w-4 text-slate-700" />
+                </div>
+                <span className="text-gray-700 text-base group-hover:text-slate-800 transition-colors">Dallas-Fort Worth, Texas</span>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Newsletter Signup */}
+        <div className="mt-12 mb-8">
+          <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-slate-200 shadow-lg text-center max-w-2xl mx-auto">
+            <h4 className="text-2xl font-bold text-gray-900 mb-4">Stay Updated</h4>
+            <p className="text-gray-700 mb-6">Get the latest AI insights and government transformation updates</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-white border border-slate-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+              />
+              <button className="bg-gradient-to-r from-blue-900 to-slate-700 hover:from-slate-800 hover:to-blue-900 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 PCRM Consulting & Solutions. All rights reserved.
+        <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-600 text-sm">
+            © 2025 Ancile AI. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Security</a>
+            {[
+              'Privacy Policy',
+              'Terms of Service',
+              'Security',
+              'Compliance'
+            ].map((link, index) => (
+              <a
+                key={index}
+                href="#"
+                className="text-gray-700 hover:text-slate-800 text-sm transition-colors duration-300 hover:scale-110 inline-block"
+              >
+                {link}
+              </a>
+            ))}
           </div>
+
+          {/* Scroll to Top Button */}
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 bg-white p-4 rounded-full border border-slate-300 hover:bg-slate-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 group"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="h-5 w-5 text-slate-700 group-hover:-translate-y-1 transition-transform" />
+          </button>
         </div>
       </div>
     </footer>

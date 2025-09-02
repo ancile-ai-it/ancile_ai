@@ -5,7 +5,7 @@ import '../index.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'PCRM - AI Consulting & Solutions',
+  title: 'Ancile AI - AI Consulting & Solutions',
   description: 'Veteran-founded AI consulting firm specializing in advanced logistics solutions, generative AI planning, and government-focused AI implementations.',
 }
 
