@@ -1,37 +1,41 @@
-import React from 'react';
 import { Lightbulb, Zap, Cog, GraduationCap, Headphones } from 'lucide-react';
 
 const models = [
   {
     icon: Lightbulb,
-    title: 'Strategic Consulting',
-    description: 'C-suite AI strategy and digital transformation'
+    title: 'Strategic AI Consulting',
+    description: 'Executive-level AI strategy development with focus on mission impact and ROI optimization',
+    features: ['Enterprise Architecture Design', 'Technology Roadmap Planning', 'Regulatory Compliance Mapping']
   },
   {
     icon: Zap,
     title: 'Rapid Prototyping',
-    description: '4-6 week proof of concept development'
+    description: 'Secure proof-of-concept development in 4-6 weeks with active government stakeholder engagement',
+    features: ['Security-First Development', 'Mission Validation Testing', 'Resource Impact Assessment']
   },
   {
     icon: Cog,
-    title: 'Full Implementation',
-    description: 'End-to-end solution delivery and deployment'
+    title: 'Full AI Implementation',
+    description: 'End-to-end mission-critical AI solution deployment with government procurement expertise',
+    features: ['Secure Infrastructure Deployment', 'Stakeholder Training Programs', 'Operational Handoff Support']
   },
   {
     icon: Headphones,
-    title: 'Managed Services',
-    description: 'Ongoing AI operations and optimization'
+    title: 'Managed AI Services',
+    description: '24/7 operational support and continuous optimization for production AI systems',
+    features: ['Real-time Performance Monitoring', 'Continuous Model Improvement', 'Security Updates & Patching']
   },
   {
     icon: GraduationCap,
     title: 'Training & Enablement',
-    description: 'Capability building and knowledge transfer'
+    description: 'Comprehensive capability building through workshops, certifications, and knowledge transfer',
+    features: ['Custom Training Programs', 'AI Ethics & Bias Mitigation', 'Operational Best Practices']
   }
 ];
 
 const ServiceModels = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-blue-50 to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">

@@ -46,7 +46,7 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 border border-white/20"
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 hover:shadow-lg transition-all duration-300 border border-white/20"
             >
               <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-4 rounded-lg mb-4 mx-auto w-fit">
                 <industry.icon className="h-8 w-8 text-white" />

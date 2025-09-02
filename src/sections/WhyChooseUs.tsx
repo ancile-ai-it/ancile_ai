@@ -1,5 +1,4 @@
-import React from 'react';
-import { Shield, Users, Award, Handshake } from 'lucide-react';
+import { Shield, Award, Handshake } from 'lucide-react';
 
 const reasons = [
   {
@@ -8,7 +7,7 @@ const reasons = [
     features: [
       'Security Cleared Team: TS/SCI cleared consultants and engineers',
       'Regulatory Mastery: FedRAMP, FISMA, NIST compliance specialists',
-      'Mission Understanding: Former military and government professionals',
+      'Mission Understanding: Veteran-founded team (US Marine Corps & Air Force)',
       'Procurement Experience: SEWP, CIO-SP3, GSA schedule holders'
     ]
   },

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
@@ -18,9 +17,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Strategic AI implementation for government excellence. We architect, implement, 
-              and optimize AI solutions that enhance mission capability while ensuring security, 
-              compliance, and measurable ROI.
+              Veteran-founded AI consulting for government agencies. The Aegis team of former US Marine and Air Force
+              veterans delivers mission-critical AI solutions with unmatched understanding of defense and intelligence operations.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-gray-700 transition-colors">
