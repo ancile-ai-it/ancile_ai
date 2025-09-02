@@ -118,7 +118,7 @@ Message: ${formData.message}
       {/* Contact Modal */}
       {isContactModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-lg max-w-xl w-full max-h-[90vh] overflow-y-auto">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-6">
               <div className="flex justify-between items-center">
