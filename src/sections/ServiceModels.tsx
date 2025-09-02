@@ -9,8 +9,8 @@ const models = [
     title: 'Strategic AI Consulting',
     description: 'Executive-level AI strategy development with focus on mission impact and ROI optimization',
     features: ['Enterprise Architecture Design', 'Technology Roadmap Planning', 'Regulatory Compliance Mapping'],
-    gradient: 'from-blue-600 to-slate-700',
-    bgColor: 'from-slate-50 to-blue-50',
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    bgColor: 'from-burnt-orange-50 to-amber-50',
     duration: '4-8 weeks'
   },
   {
@@ -18,8 +18,8 @@ const models = [
     title: 'Rapid Prototyping',
     description: 'Secure proof-of-concept development in 4-6 weeks with active government stakeholder engagement',
     features: ['Security-First Development', 'Mission Validation Testing', 'Resource Impact Assessment'],
-    gradient: 'from-slate-600 to-blue-700',
-    bgColor: 'from-slate-50 to-gray-50',
+    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
+    bgColor: 'from-burnt-orange-50 to-amber-50',
     duration: '4-6 weeks'
   },
   {
@@ -27,8 +27,8 @@ const models = [
     title: 'Full AI Implementation',
     description: 'End-to-end mission-critical AI solution deployment with government procurement expertise',
     features: ['Secure Infrastructure Deployment', 'Stakeholder Training Programs', 'Operational Handoff Support'],
-    gradient: 'from-blue-700 to-slate-600',
-    bgColor: 'from-blue-50 to-slate-50',
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    bgColor: 'from-burnt-orange-50 to-amber-50',
     duration: '12-24 weeks'
   },
   {
@@ -36,8 +36,8 @@ const models = [
     title: 'Managed AI Services',
     description: '24/7 operational support and continuous optimization for production AI systems',
     features: ['Real-time Performance Monitoring', 'Continuous Model Improvement', 'Security Updates & Patching'],
-    gradient: 'from-slate-700 to-blue-600',
-    bgColor: 'from-gray-50 to-slate-50',
+    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
+    bgColor: 'from-burnt-orange-50 to-amber-50',
     duration: 'Ongoing'
   },
   {
@@ -45,8 +45,8 @@ const models = [
     title: 'Training & Enablement',
     description: 'Comprehensive capability building through workshops, certifications, and knowledge transfer',
     features: ['Custom Training Programs', 'AI Ethics & Bias Mitigation', 'Operational Best Practices'],
-    gradient: 'from-blue-600 to-slate-700',
-    bgColor: 'from-blue-50 to-slate-50',
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    bgColor: 'from-burnt-orange-50 to-amber-50',
     duration: '8-16 weeks'
   }
 ];
@@ -58,8 +58,8 @@ const ServiceModels = () => {
     <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-32 h-32 bg-blue-200/20 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute bottom-40 left-20 w-40 h-40 bg-purple-200/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}} />
+        <div className="absolute top-20 right-20 w-32 h-32 bg-burnt-orange-200/20 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute bottom-40 left-20 w-40 h-40 bg-amber-200/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,7 +104,7 @@ const ServiceModels = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-900 group-hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
                 {model.title}
               </h3>
 
@@ -164,7 +164,7 @@ const ServiceModels = () => {
               <h3 className="text-2xl font-bold text-gray-900">Have Unique Requirements?</h3>
             </div>
             <p className="text-gray-600 mb-6 max-w-md">Let's explore your specific mission needs and develop a tailored AI strategy that delivers measurable results</p>
-            <button className="bg-gradient-to-r from-blue-900 to-slate-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center space-x-2 mx-auto">
+            <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center space-x-2 mx-auto">
               <span>Get Started Today</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

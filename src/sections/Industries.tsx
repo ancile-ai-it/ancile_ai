@@ -9,40 +9,40 @@ const industries = [
     icon: Shield,
     title: 'Defense & Intelligence',
     description: 'Warfighter support and operational intelligence with AI-enhanced situational awareness',
-    gradient: 'from-blue-600 to-slate-700',
-    hoverColor: 'hover:from-blue-700 hover:to-slate-800',
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    hoverColor: 'hover:from-burnt-orange-700 hover:to-burnt-orange-900',
     features: ['Operational Intelligence', 'Mission Planning', 'Risk Assessment']
   },
   {
     icon: Globe,
     title: 'Homeland Security',
     description: 'Border protection and threat assessment with advanced surveillance capabilities',
-    gradient: 'from-slate-600 to-blue-700',
-    hoverColor: 'hover:from-slate-700 hover:to-blue-800',
+    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
+    hoverColor: 'hover:from-burnt-orange-800 hover:to-burnt-orange-700',
     features: ['Surveillance Systems', 'Pattern Recognition', 'Incident Response']
   },
   {
     icon: Building,
     title: 'Federal Civilian',
     description: 'Citizen services and regulatory compliance with automated processing solutions',
-    gradient: 'from-blue-700 to-slate-600',
-    hoverColor: 'hover:from-blue-800 hover:to-slate-700',
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    hoverColor: 'hover:from-burnt-orange-700 hover:to-burnt-orange-800',
     features: ['Process Automation', 'Data Analytics', 'Compliance Monitoring']
   },
   {
     icon: Search,
     title: 'Law Enforcement',
     description: 'Investigative support and crime analysis with predictive intelligence tools',
-    gradient: 'from-slate-700 to-blue-600',
-    hoverColor: 'hover:from-slate-800 hover:to-blue-700',
+    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
+    hoverColor: 'hover:from-burnt-orange-800 hover:to-burnt-orange-700',
     features: ['Crime Prediction', 'Evidence Analysis', 'Forensic Support']
   },
   {
     icon: AlertTriangle,
     title: 'Emergency Management',
     description: 'Disaster response and resource coordination with real-time assessment systems',
-    gradient: 'from-blue-600 to-slate-700',
-    hoverColor: 'hover:from-blue-700 hover:to-slate-800',
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    hoverColor: 'hover:from-burnt-orange-700 hover:to-burnt-orange-800',
     features: ['Resource Allocation', 'Impact Assessment', 'Recovery Planning']
   }
 ];
@@ -55,9 +55,9 @@ const Industries = () => {
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Pulsing orbs */}
-        <div className="absolute top-20 left-20 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute top-40 right-32 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
-        <div className="absolute bottom-32 left-1/2 w-48 h-48 bg-green-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}} />
+        <div className="absolute top-20 left-20 w-40 h-40 bg-burnt-orange-500/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute top-40 right-32 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-32 left-1/2 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}} />
 
         {/* Grid pattern */}
         <div className="absolute inset-0">
@@ -103,7 +103,7 @@ const Industries = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 group-hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
                 {industry.title}
               </h3>
 
@@ -136,7 +136,7 @@ const Industries = () => {
           <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Mission?</h3>
             <p className="text-gray-600 mb-6">Join government agencies delivering AI-powered solutions at scale</p>
-            <button className="bg-gradient-to-r from-blue-900 to-slate-700 hover:from-slate-800 hover:to-blue-900 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+            <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
               Start Your Transformation
             </button>
           </div>

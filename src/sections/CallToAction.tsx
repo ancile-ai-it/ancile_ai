@@ -43,9 +43,9 @@ const CallToAction = () => {
         ))}
 
         {/* Gradient orbs */}
-        <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
-        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
+        <div className="absolute top-20 left-20 w-64 h-64 bg-burnt-orange-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +61,7 @@ const CallToAction = () => {
             <br />
             <span className="relative">
               Your Mission?
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-slate-700 opacity-20 blur-lg rounded-lg" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 opacity-20 blur-lg rounded-lg" />
             </span>
           </h2>
 
@@ -75,11 +75,11 @@ const CallToAction = () => {
           {/* Primary CTA */}
           <div className="group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:bg-white/80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 shadow-lg">
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-slate-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange-600/20 to-burnt-orange-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl" />
 
             <div className="relative">
               <div className="flex items-center justify-between mb-6">
-                <div className="bg-gradient-to-br from-blue-600 to-slate-700 p-4 rounded-xl shadow-lg">
+                <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 p-4 rounded-xl shadow-lg">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
                 <div className="text-right">
@@ -94,7 +94,7 @@ const CallToAction = () => {
                 understands your mission's unique requirements and the strategic importance of reliable AI implementation.
               </p>
 
-              <button className="group/btn w-full bg-gradient-to-r from-blue-900 to-slate-700 hover:from-slate-800 hover:to-blue-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center justify-center space-x-2">
+              <button className="group/btn w-full bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center justify-center space-x-2">
                 <Calendar className="h-5 w-5" />
                 <span>Book Your Consultation</span>
                 <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
@@ -106,7 +106,7 @@ const CallToAction = () => {
           <div className="group relative bg-white/50 backdrop-blur-xl rounded-2xl p-8 border border-slate-200 hover:bg-white/70 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 shadow-lg">
             <div className="relative">
               <div className="flex items-center justify-between mb-6">
-                <div className="bg-gradient-to-br from-slate-600 to-blue-700 p-4 rounded-xl shadow-lg">
+                <div className="bg-gradient-to-br from-slate-600 to-burnt-orange-700 p-4 rounded-xl shadow-lg">
                   <Sparkles className="h-12 w-12 text-white" />
                 </div>
                 <div className="text-right">
@@ -140,7 +140,7 @@ const CallToAction = () => {
               { number: '100%', label: 'Security Compliant' }
             ].map((stat, index) => (
               <div key={index} className="group bg-white/60 backdrop-blur-xl px-6 py-4 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-800 to-slate-700 bg-clip-text text-transparent mb-1 group-hover:from-blue-900 group-hover:to-slate-800 group-hover:scale-105 transition-all duration-300">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-1 group-hover:from-burnt-orange-900 group-hover:to-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                   {stat.number}
                 </div>
                 <div className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">{stat.label}</div>

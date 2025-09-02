@@ -18,9 +18,9 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23111111%22 fill-opacity=%220.02%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
 
         {/* Professional gradient orbs */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100/30 rounded-full blur-2xl" />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-burnt-orange-100/30 rounded-full blur-2xl" />
         <div className="absolute bottom-20 right-20 w-48 h-48 bg-slate-200/20 rounded-full blur-2xl" />
-        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-gray-100/20 rounded-full blur-xl" />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-amber-100/20 rounded-full blur-xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
@@ -37,7 +37,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
             Government-Grade
             <br />
-            <span className="relative bg-gradient-to-r from-blue-900 to-slate-800 bg-clip-text text-transparent">
+            <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
               AI Solutions
             </span>
           </h1>
@@ -51,7 +51,7 @@ const Hero = () => {
 
         {/* Professional CTA Buttons */}
         <div className={`text-center flex flex-col sm:flex-row gap-4 justify-center transform transition-all duration-700 delay-600 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-          <button className="bg-gradient-to-r from-blue-900 to-slate-700 hover:from-slate-800 hover:to-blue-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center space-x-2">
+          <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center space-x-2">
             <span>Partner with Us Today</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </button>

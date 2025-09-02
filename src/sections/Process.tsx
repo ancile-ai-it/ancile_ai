@@ -53,9 +53,9 @@ const Process = () => {
     <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 right-10 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-purple-100/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-green-100/20 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-10 w-96 h-96 bg-burnt-orange-100/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-amber-100/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-amber-100/20 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ const Process = () => {
           <div className="hidden lg:block">
             <div className="relative">
               {/* Connection Lines */}
-              <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-slate-400 to-slate-600" />
+              <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-burnt-orange-400 via-burnt-orange-500 to-burnt-orange-600" />
 
               <div className="flex justify-between items-start px-4">
                 {processSteps.map((step, index) => {
@@ -96,7 +96,7 @@ const Process = () => {
                       <div
                         className={`relative w-16 h-16 mx-auto mb-4 rounded-full border-2 cursor-pointer transition-all duration-500 flex items-center justify-center ${
                           isActive
-                            ? 'bg-gradient-to-br from-blue-900 to-slate-700 border-white shadow-lg shadow-blue-500/25'
+                            ? 'bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-900 border-white shadow-lg shadow-burnt-orange-500/25'
                             : 'bg-white border-slate-300'
                         }`}
                         onClick={() => setActiveStep(index)}
@@ -106,7 +106,7 @@ const Process = () => {
 
                       {/* Step Content */}
                       <div className="text-center">
-                        <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-900 group-hover:scale-105 transition-all duration-300">{step.title}</h3>
+                        <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">{step.title}</h3>
                         <p className="text-sm text-gray-600 mb-2 group-hover:text-slate-700 transition-colors">{step.subtitle}</p>
                         <span className="inline-flex items-center px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
                           <Clock className="h-3 w-3 mr-1" />
@@ -131,7 +131,7 @@ const Process = () => {
                     onClick={() => setActiveStep(index)}
                     className={`p-3 rounded-xl transition-all duration-300 ${
                       isActive
-                        ? 'bg-gradient-to-br from-blue-900 to-slate-700 shadow-lg'
+                        ? 'bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-900 shadow-lg'
                         : 'bg-white border border-slate-200 hover:border-slate-300'
                     }`}
                   >
@@ -171,7 +171,7 @@ const Process = () => {
                 <h4 className="font-semibold text-gray-900 mb-3">Key Deliverables:</h4>
                 {processSteps[activeStep].deliverables.map((deliverable, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gradient-to-r from-slate-800 to-blue-900 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-900 rounded-full"></div>
                     <span className="text-gray-700 text-sm">{deliverable}</span>
                   </div>
                 ))}
@@ -193,7 +193,7 @@ const Process = () => {
                       <div
                         key={index}
                         className={`flex-1 h-2 rounded-full transition-all duration-300 ${
-                          index <= activeStep ? 'bg-gradient-to-r from-blue-900 to-slate-700' : 'bg-gray-200'
+                          index <= activeStep ? 'bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900' : 'bg-gray-200'
                         }`}
                       />
                     ))}
@@ -206,7 +206,7 @@ const Process = () => {
                 <button
                   onClick={() => setActiveStep(Math.min(processSteps.length - 1, activeStep + 1))}
                   disabled={activeStep === processSteps.length - 1}
-                  className="px-4 py-2 bg-gradient-to-r from-blue-900 to-slate-700 text-white rounded-lg hover:from-slate-800 hover:to-blue-900 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="px-4 py-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white rounded-lg hover:from-burnt-orange-800 hover:to-burnt-orange-900 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                 >
                   Next
                   <ArrowRight className="h-4 w-4 ml-2" />
@@ -216,7 +216,7 @@ const Process = () => {
 
             {/* Visual */}
             <div className="text-center">
-              <div className="w-64 h-64 mx-auto bg-gradient-to-br from-slate-100 to-blue-100 rounded-2xl flex items-center justify-center shadow-2xl">
+              <div className="w-64 h-64 mx-auto bg-gradient-to-br from-burnt-orange-50 to-amber-50 rounded-2xl flex items-center justify-center shadow-2xl">
                 {React.createElement(processSteps[activeStep].icon, { className: "h-24 w-24 text-slate-700" })}
               </div>
             </div>
@@ -231,7 +231,7 @@ const Process = () => {
               Our proven process ensures secure, compliant, and successful AI implementation
               tailored to your unique mission requirements.
             </p>
-            <button className="bg-gradient-to-r from-blue-900 to-slate-700 hover:from-slate-800 hover:to-blue-900 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+            <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
               Schedule Strategy Session
             </button>
           </div>

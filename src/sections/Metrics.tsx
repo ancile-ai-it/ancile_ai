@@ -62,9 +62,9 @@ const Metrics = () => {
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Static gradient orbs */}
-        <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-32 right-32 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-green-500/10 rounded-full blur-2xl" />
+        <div className="absolute top-20 left-20 w-64 h-64 bg-burnt-orange-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-32 right-32 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-burnt-orange-300/10 rounded-full blur-2xl" />
 
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -104,11 +104,11 @@ const Metrics = () => {
                 <metric.icon className="h-6 w-6" />
               </div>
 
-              <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent group-hover:from-blue-900 group-hover:to-slate-700 group-hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent group-hover:from-burnt-orange-800 group-hover:to-slate-700 group-hover:scale-105 transition-all duration-300">
                 {metric.value}
               </div>
 
-              <div className="text-sm text-gray-900 font-semibold mb-1 group-hover:text-blue-900 transition-colors">
+              <div className="text-sm text-gray-900 font-semibold mb-1 group-hover:text-burnt-orange-800 transition-colors">
                 {metric.label}
               </div>
 
@@ -128,7 +128,7 @@ const Metrics = () => {
                 key={index}
                 className="flex items-start space-x-4 group"
               >
-                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-blue-600 to-slate-700 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
                 <p className="text-gray-700 group-hover:text-slate-800 transition-colors duration-300 leading-relaxed">
                   {achievement}
                 </p>
@@ -143,7 +143,7 @@ const Metrics = () => {
                 key={index}
                 className="flex items-start space-x-4 group"
               >
-                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-slate-600 to-blue-700 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-600 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
                 <p className="text-gray-700 group-hover:text-slate-800 transition-colors duration-300 leading-relaxed">
                   {achievement}
                 </p>

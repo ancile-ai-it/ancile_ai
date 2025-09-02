@@ -14,8 +14,8 @@ const reasons = [
       'Mission Understanding: Veteran-founded team (US Marine Corps & Air Force)',
       'Procurement Experience: SEWP, CIO-SP3, GSA schedule holders'
     ],
-    gradient: 'from-blue-600 to-slate-700',
-    bgColor: 'from-slate-50 to-blue-50'
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    bgColor: 'from-burnt-orange-50 to-amber-50'
   },
   {
     icon: Award,
@@ -27,8 +27,8 @@ const reasons = [
       'Measurable Outcomes: KPI-driven implementations with clear success metrics',
       'Knowledge Transfer: Comprehensive training and capability development'
     ],
-    gradient: 'from-slate-600 to-blue-700',
-    bgColor: 'from-slate-50 to-gray-50'
+    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
+    bgColor: 'from-burnt-orange-50 to-amber-50'
   },
   {
     icon: Handshake,
@@ -40,8 +40,8 @@ const reasons = [
       'Defense Contractors: Established integration channels with prime contractors',
       'Academic Network: Research partnerships for cutting-edge capabilities'
     ],
-    gradient: 'from-blue-700 to-slate-600',
-    bgColor: 'from-blue-50 to-slate-50'
+    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
+    bgColor: 'from-burnt-orange-50 to-amber-50'
   }
 ];
 
@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
 
                 {/* Title */}
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-900 group-hover:scale-105 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
                     {reason.title}
                   </h3>
                   <p className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">{reason.subtitle}</p>
@@ -142,7 +142,7 @@ const WhyChooseUs = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="bg-white/60 backdrop-blur-lg px-6 py-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
-                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-800 to-blue-800 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
                   <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
