@@ -1,4 +1,4 @@
-import { Shield, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Target, Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,15 +9,15 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="bg-gradient-to-br from-blue-800 to-blue-900 p-2 rounded-lg">
-                <Shield className="h-8 w-8 text-white" />
+                <Target className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Aegis AI</h3>
+                <h3 className="text-xl font-bold">PCRM</h3>
                 <p className="text-sm text-gray-400">Consulting & Solutions</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Veteran-founded AI consulting for government agencies. The Aegis team of former US Marine and Air Force
+              Veteran-founded AI consulting for government agencies. The PCRM team of former US Marine and Air Force
               veterans delivers mission-critical AI solutions with unmatched understanding of defense and intelligence operations.
             </p>
             <div className="flex space-x-4">
@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">contact@aegisai.gov</span>
+                <span className="text-sm">contact@pcrmconsulting.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -55,7 +55,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span className="text-sm">Washington, DC</span>
+                <span className="text-sm">Dallas-Fort Worth, Texas</span>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Aegis AI Consulting & Solutions. All rights reserved.
+            © 2025 PCRM Consulting & Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>

@@ -52,7 +52,7 @@ const Hero = () => {
         {/* CTA */}
         <div className="text-center pb-4">
           <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 inline-flex items-center space-x-2">
-            <span>Start Your AI Journey</span>
+            <span>Partner with Us for Your AI Initiatives</span>
             <ArrowRight className="h-5 w-5" />
           </button>
         </div>

@@ -5,8 +5,8 @@ import '../index.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Aegis AI - Government AI Consulting & Solutions',
-  description: 'Expert AI consulting for government agencies. Mission-focused AI solutions by veteran-founded team with deep Defense and Intelligence experience.',
+  title: 'PCRM - AI Consulting & Solutions',
+  description: 'Veteran-founded AI consulting firm specializing in advanced logistics solutions, generative AI planning, and government-focused AI implementations.',
 }
 
 export default function RootLayout({
