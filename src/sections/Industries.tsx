@@ -96,7 +96,7 @@ const Industries = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Target className="h-5 w-5 text-slate-600" />
+            <Target className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               Mission Areas
             </span>
@@ -117,7 +117,7 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <div
               key={index}
-              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 ${
+              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 min-h-[360px] flex flex-col ${
                 hoveredIndex === index ? "scale-105" : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -146,7 +146,7 @@ const Industries = () => {
               </p>
 
               {/* Features List */}
-              <div className="space-y-2 mb-6">
+              <div className="space-y-2 mt-auto">
                 {industry.features.map((feature, featureIndex) => (
                   <div
                     key={featureIndex}
@@ -159,29 +159,8 @@ const Industries = () => {
                   </div>
                 ))}
               </div>
-
-              {/* CTA */}
-              <button className="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-lg text-slate-700 hover:text-slate-800 text-sm font-medium transition-all duration-300 group/btn">
-                <span>Explore Solutions</span>
-                <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Mission?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Join government agencies delivering AI-powered solutions at scale
-            </p>
-            <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
-              Start Your Transformation
-            </button>
-          </div>
         </div>
       </div>
     </section>

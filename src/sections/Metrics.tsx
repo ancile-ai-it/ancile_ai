@@ -82,7 +82,7 @@ const Metrics = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-lg px-4 py-2 rounded-full border border-slate-200 mb-8">
-            <Award className="h-5 w-5 text-slate-600" />
+            <Award className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               Trust & Performance
             </span>
@@ -157,14 +157,14 @@ const Metrics = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-4 bg-white/60 backdrop-blur-xl rounded-full px-8 py-4 border border-slate-200 shadow-lg">
             <div className="flex items-center space-x-2">
-              <Shield className="h-5 w-5 text-slate-700" />
+              <Shield className="h-5 w-5 text-burnt-orange-700" />
               <span className="text-sm text-gray-700">
                 Trusted by Government Leaders
               </span>
             </div>
             <div className="text-2xl">•</div>
             <div className="flex items-center space-x-2">
-              <Target className="h-5 w-5 text-slate-700" />
+              <Target className="h-5 w-5 text-burnt-orange-700" />
               <span className="text-sm text-gray-700">
                 Mission-Critical Results
               </span>

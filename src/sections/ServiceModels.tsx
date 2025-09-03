@@ -102,7 +102,7 @@ const ServiceModels = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <CheckCircle className="h-5 w-5 text-slate-600" />
+            <CheckCircle className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               Our Services
             </span>
@@ -123,7 +123,7 @@ const ServiceModels = () => {
           {models.map((model, index) => (
             <div
               key={index}
-              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 ${
+              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 min-h-[340px] flex flex-col ${
                 hoveredIndex === index ? "scale-105" : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -133,13 +133,6 @@ const ServiceModels = () => {
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${model.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
               />
-
-              {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-white/80 backdrop-blur-lg px-3 py-1 rounded-full border border-white/20 shadow-lg">
-                <div
-                  className={`w-3 h-3 bg-gradient-to-r ${model.gradient} rounded-full`}
-                ></div>
-              </div>
 
               {/* Icon */}
               <div
@@ -166,7 +159,7 @@ const ServiceModels = () => {
               </p>
 
               {/* Features List */}
-              <div className="space-y-2 mb-6">
+              <div className="space-y-2 mt-auto">
                 {model.features.slice(0, 2).map((feature, featureIndex) => (
                   <div
                     key={featureIndex}
@@ -179,18 +172,12 @@ const ServiceModels = () => {
                   </div>
                 ))}
               </div>
-
-              {/* CTA Button */}
-              <button className="inline-flex items-center space-x-2 bg-white/60 hover:bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-slate-800 transition-all duration-300 group-hover:translate-x-1 transform border border-white/30">
-                <span>Learn More</span>
-                <ArrowRight className="h-3 w-3" />
-              </button>
             </div>
           ))}
         </div>
 
         {/* Tech Stack Showcases */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { name: "AI/ML Platforms", tech: "OpenAI, Anthropic, Google" },
             { name: "Cloud & Infra", tech: "AWS GovCloud, Azure Govt" },
@@ -209,38 +196,6 @@ const ServiceModels = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-white/60 to-white/40 backdrop-blur-xl rounded-2xl p-8 border border-white/20 inline-block shadow-lg">
-            <div className="flex items-center space-x-3 mb-4 justify-center">
-              <span className="text-2xl">💡</span>
-              <h3 className="text-2xl font-bold text-gray-900">
-                Have Unique Requirements?
-              </h3>
-            </div>
-            <p className="text-gray-600 mb-6 max-w-md">
-              Let's explore your specific mission needs and develop a tailored
-              AI strategy that delivers measurable results
-            </p>
-            <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center space-x-2 mx-auto">
-              <span>Get Started Today</span>
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
     </section>

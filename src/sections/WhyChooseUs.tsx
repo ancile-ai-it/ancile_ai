@@ -5,7 +5,6 @@ import {
   Award,
   Handshake,
   CheckCircle,
-  ArrowUpRight,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -73,7 +72,7 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <CheckCircle className="h-5 w-5 text-slate-600" />
+            <CheckCircle className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               Why Choose Us
             </span>
@@ -107,13 +106,6 @@ const WhyChooseUs = () => {
 
               {/* Content Wrapper for Z-Index */}
               <div className="relative z-10">
-                {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-white/80 backdrop-blur-lg px-3 py-1 rounded-full border border-white/20 shadow-lg">
-                  <div
-                    className={`w-3 h-3 bg-gradient-to-r ${reason.gradient} rounded-full`}
-                  ></div>
-                </div>
-
                 {/* Icon */}
                 <div
                   className={`relative mb-6 inline-flex p-4 bg-gradient-to-br ${reason.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
@@ -148,13 +140,6 @@ const WhyChooseUs = () => {
                   ))}
                 </div>
 
-                {/* Learn More Link */}
-                <div className="mt-6 pt-4 border-t border-gray-100">
-                  <button className="inline-flex items-center space-x-2 text-sm font-medium text-slate-600 hover:text-slate-800 transition-colors group-hover:translate-x-1 transform transition-transform duration-200">
-                    <span>Learn More</span>
-                    <ArrowUpRight className="h-4 w-4" />
-                  </button>
-                </div>
               </div>
             </div>
           ))}

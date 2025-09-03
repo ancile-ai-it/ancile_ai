@@ -97,7 +97,7 @@ const Process = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-8">
-            <Clock className="h-5 w-5 text-slate-600" />
+            <Clock className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               Our Proven Process
             </span>
@@ -292,22 +292,6 @@ const Process = () => {
                 })}
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Start Your AI Journey?
-            </h3>
-            <p className="text-gray-600 mb-8">
-              Our proven process ensures secure, compliant, and successful AI
-              implementation tailored to your unique mission requirements.
-            </p>
-            <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
-              Schedule Strategy Session
-            </button>
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ const CallToAction = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Sparkles className="h-5 w-5 text-slate-600" />
+            <Sparkles className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               Get Started Today
             </span>
@@ -80,68 +80,62 @@ const CallToAction = () => {
         </div>
 
         {/* CTA Cards Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-1 gap-8">
           {/* Primary CTA */}
-          <div className="group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:bg-white/80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 shadow-lg">
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange-600/20 to-burnt-orange-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl" />
+          <div className="group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:bg-white/85 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 shadow-lg">
+            {/* Softer glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange-600/20 to-burnt-orange-800/20 opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-2xl blur-xl" />
+
+            {/* Subtle decorative elements */}
+            <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-burnt-orange-50 to-amber-50 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500" />
+            <div className="absolute bottom-6 left-6 w-10 h-10 bg-gradient-to-br from-burnt-orange-100 to-amber-100 rounded-full opacity-15 group-hover:opacity-25 transition-opacity duration-500" />
 
             <div className="relative">
+              {/* Header section */}
               <div className="flex items-center justify-between mb-6">
-                <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 p-4 rounded-xl shadow-lg">
+                <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 p-4 rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
-                <div className="text-right">
-                  <div className="text-sm text-gray-600">Starting from</div>
-                  <div className="text-2xl font-bold text-gray-900">$25K</div>
-                </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Schedule Secure Consultation
-              </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Partner with veteran-founded PCRM to secure your agency's AI
-                advantage. Our security-cleared team understands your mission's
-                unique requirements and the strategic importance of reliable AI
-                implementation.
-              </p>
-
-              <button className="group/btn w-full bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center justify-center space-x-2">
-                <Calendar className="h-5 w-5" />
-                <span>Book Your Consultation</span>
-                <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          {/* Secondary CTA */}
-          <div className="group relative bg-white/50 backdrop-blur-xl rounded-2xl p-8 border border-slate-200 hover:bg-white/70 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 shadow-lg">
-            <div className="relative">
-              <div className="flex items-center justify-between mb-6">
-                <div className="bg-gradient-to-br from-slate-600 to-burnt-orange-700 p-4 rounded-xl shadow-lg">
-                  <Sparkles className="h-12 w-12 text-white" />
-                </div>
-                <div className="text-right">
-                  <div className="text-sm text-gray-600">Resource</div>
-                  <div className="text-lg font-bold text-gray-900">Free</div>
-                </div>
+              {/* Enhanced title with underline effect */}
+              <div className="mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-900 transition-colors duration-500">
+                  Schedule Secure Consultation
+                </h3>
+                <div className="w-0 group-hover:w-24 h-1 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 transition-all duration-700" />
               </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Download AI Readiness Assessment
-              </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Get our comprehensive white paper on AI readiness for government
-                agencies. Learn about strategic considerations, compliance
-                requirements, and proven implementation frameworks.
+              {/* Enhanced description with better spacing */}
+              <p className="text-lg text-gray-700 mb-10 leading-relaxed text-justify">
+                Partner with veteran-founded Ancile AI to secure your agency's
+                AI advantage. Our security-cleared team understands your
+                mission's unique requirements and the strategic importance of
+                reliable AI implementation. Let's discuss your vision and craft
+                a tailored solution that delivers measurable mission impact.
               </p>
 
-              <button className="group/btn w-full bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 hover:text-slate-800 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
-                <Download className="h-5 w-5" />
-                <span>Download White Paper</span>
-                <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
-              </button>
+              {/* Enhanced CTA button with multiple interactive elements */}
+              <div className="space-y-4">
+                <button className="group/btn w-full bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-800 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-102 transform flex items-center justify-center space-x-2">
+                  <Calendar className="h-5 w-5" />
+                  <span>Book Your Consultation</span>
+                  <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </button>
+
+                {/* Secondary info */}
+                <div className="flex items-center justify-center space-x-6 text-sm text-slate-600">
+                  <div className="flex items-center space-x-2">
+                    <Download className="h-4 w-4 text-burnt-orange-600" />
+                    <span>Free Strategy Brief</span>
+                  </div>
+                  <div className="w-px h-4 bg-slate-300"></div>
+                  <div className="flex items-center space-x-2">
+                    <Shield className="h-4 w-4 text-burnt-orange-600" />
+                    <span>Security-First Approach</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
