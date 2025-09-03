@@ -45,17 +45,17 @@ const Hero = () => {
           }`}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
-            Government-Grade
+            Mission-Critical AI
             <br />
             <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
-              AI Solutions
+              That Works in Contested Environments
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
-            We deliver enterprise-grade AI capabilities that transform
-            government operations, enhance decision-making, and accelerate
-            mission success with uncompromising security and compliance.
+            Veteran-founded team delivering secure, mission-focused AI solutions
+            that work at the tactical edge—from proof-of-concept to production
+            in weeks, not years.
           </p>
         </div>
 

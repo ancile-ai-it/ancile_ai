@@ -5,45 +5,47 @@ import {
   Award,
   Handshake,
   CheckCircle,
+  Target,
+  Users,
 } from "lucide-react";
 import { useState } from "react";
 
 const reasons = [
   {
     icon: Shield,
-    title: "Deep Government Expertise",
-    subtitle: "Mission-Critical Security & Compliance",
+    title: "Built for Government, Not Adapted",
+    subtitle: "Purpose-built solutions from day one",
     features: [
-      "Security Cleared Team: TS/SCI cleared consultants and engineers",
-      "Regulatory Mastery: FedRAMP, FISMA, NIST compliance specialists",
-      "Mission Understanding: Veteran-founded team (US Marine Corps & Air Force)",
-      "Procurement Experience: SEWP, CIO-SP3, GSA schedule holders",
+      "Security and compliance integrated from design, not retrofitted",
+      "Government operations as primary use case, not secondary consideration",
+      "Zero-trust architecture as foundational, not bolted-on",
+      "Regulatory compliance embedded, not workarounds",
     ],
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     bgColor: "from-burnt-orange-50 to-amber-50",
   },
   {
-    icon: Award,
-    title: "Proven Methodology",
-    subtitle: "Agile AI Implementation",
+    icon: Users,
+    title: "Mission Operators, Not Just Consultants",
+    subtitle: "Veteran-led understanding of real requirements",
     features: [
-      "Agile AI Delivery: 6-week sprint cycles with continuous stakeholder engagement",
-      "Risk-First Approach: Security and compliance integrated from day one",
-      "Measurable Outcomes: KPI-driven implementations with clear success metrics",
-      "Knowledge Transfer: Comprehensive training and capability development",
+      "Operator-founded team with firsthand mission experience",
+      "Requirements capture from battlefield realities, not theoretical models",
+      "Operational constraints understood innately, not learned secondhand",
+      "Mission success prioritized above all other metrics",
     ],
     gradient: "from-burnt-orange-700 to-burnt-orange-600",
     bgColor: "from-burnt-orange-50 to-amber-50",
   },
   {
-    icon: Handshake,
-    title: "Technology Partnerships",
-    subtitle: "Enterprise-Grade Solutions",
+    icon: Target,
+    title: "Tactical Edge Specialists",
+    subtitle: "Edge AI that works in contested environments",
     features: [
-      "Cloud Providers: AWS GovCloud, Azure Government certified partners",
-      "AI Platforms: Strategic relationships with OpenAI, Anthropic, Google",
-      "Defense Contractors: Established integration channels with prime contractors",
-      "Academic Network: Research partnerships for cutting-edge capabilities",
+      "AI that operates in disconnected, contested environments",
+      "Off-grid capability with minimal bandwidth requirements",
+      "Multi-domain battle management and ISR optimization",
+      "Forward-operating units as our primary focus",
     ],
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     bgColor: "from-burnt-orange-50 to-amber-50",
@@ -74,17 +76,17 @@ const WhyChooseUs = () => {
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
             <CheckCircle className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
-              Why Choose Us
+              Why Ancile?
             </span>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent mb-6">
-            Government AI Experts
+            Why Ancile?
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Unmatched expertise, proven results, and deep government mission
-            understanding to accelerate your AI transformation journey
+            We don't adapt commercial solutions for government—we build AI
+            specifically for mission-critical environments where others can't operate
           </p>
         </div>
 
@@ -149,10 +151,10 @@ const WhyChooseUs = () => {
         <div className="mt-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "45+", label: "Years Combined Experience" },
-              { number: "30+", label: "Projects Delivered" },
-              { number: "TS/SCI", label: "Cleared Personnel" },
-              { number: "24/7", label: "Support Available" },
+              { number: "60%", label: "Faster Deployment vs. Traditional IT" },
+              { number: "0", label: "Security Incidents in Classified Work" },
+              { number: "100%", label: "Client Mission Success Rate" },
+              { number: "24/7", label: "Mission Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2">

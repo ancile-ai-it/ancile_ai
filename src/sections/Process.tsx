@@ -21,6 +21,8 @@ const processSteps = [
     subtitle: "Understand Your Mission",
     description:
       "Deep dive analysis of your current operations, pain points, and AI opportunities. We conduct comprehensive stakeholder interviews and data assessment to identify high-impact use cases.",
+    whyMatters:
+      "Most AI projects fail because consultants don't understand the mission. Our veteran team brings deep operational experience that ensures we're solving the right problems, not just building technology.",
     duration: "1-2 weeks",
     deliverables: [
       "Mission Analysis Report",
@@ -34,6 +36,8 @@ const processSteps = [
     subtitle: "Define Your AI Roadmap",
     description:
       "Develop comprehensive AI strategy aligned with your mission objectives. We create detailed implementation plans, resource requirements, and success metrics tailored to government procurement.",
+    whyMatters:
+      "We cut through procurement complexity and deliver clear, actionable roadmaps that get approved. No wasted time on theoretical exercises—only practical plans that work in government environments.",
     duration: "2-4 weeks",
     deliverables: [
       "AI Strategy Roadmap",
@@ -47,6 +51,8 @@ const processSteps = [
     subtitle: "Build & Validate Solutions",
     description:
       "Create secure proof-of-concept implementations with real data in 4-6 weeks. Active stakeholder engagement ensures solutions meet mission requirements and team buy-in.",
+    whyMatters:
+      "We prove value before asking for production investment. Government budgets are precious—our rapid prototyping builds confidence and stakeholder buy-in before committing to full implementation.",
     duration: "4-6 weeks",
     deliverables: [
       "Functional Prototype",
@@ -60,6 +66,8 @@ const processSteps = [
     subtitle: "Production Implementation",
     description:
       "Full-scale deployment with comprehensive training, documentation, and transition to operations. We handle compliance, security clearances, and knowledge transfer.",
+    whyMatters:
+      "Military-grade project management ensures on-time delivery. While others overrun budgets and schedules, we deliver when promised with the quality required for mission-critical operations.",
     duration: "8-16 weeks",
     deliverables: [
       "Production Deployment",
@@ -73,6 +81,8 @@ const processSteps = [
     subtitle: "Continuous Improvement",
     description:
       "Ongoing monitoring, performance optimization, and evolution of your AI solutions. 24/7 support with regular updates to maintain mission effectiveness.",
+    whyMatters:
+      "AI isn't 'set and forget' in dynamic government environments. Our continuous support ensures your solutions evolve with mission requirements and maintain peak effectiveness.",
     duration: "Ongoing",
     deliverables: [
       "Performance Monitoring",
@@ -218,6 +228,15 @@ const Process = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 {processSteps[activeStep].description}
               </p>
+
+              <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
+                <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide">
+                  Why This Matters
+                </h4>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {processSteps[activeStep].whyMatters}
+                </p>
+              </div>
 
               <div className="flex items-center space-x-2 mb-6">
                 <Clock className="h-5 w-5 text-gray-600" />
