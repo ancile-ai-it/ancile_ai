@@ -66,7 +66,7 @@ const Metrics = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-lg px-4 py-2 rounded-full border border-slate-200 mb-8">
             <Award className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
@@ -74,7 +74,7 @@ const Metrics = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
             Established Excellence
           </h2>
 

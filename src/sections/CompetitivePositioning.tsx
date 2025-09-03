@@ -55,7 +55,7 @@ const CompetitivePositioning = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
             Purpose-Built vs.
             <br />
             <span className="bg-gradient-to-r from-red-600 via-orange-600 to-burnt-orange-800 bg-clip-text text-transparent">

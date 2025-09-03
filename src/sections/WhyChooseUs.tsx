@@ -3,10 +3,9 @@
 import {
   Shield,
   Award,
-  Handshake,
-  CheckCircle,
   Target,
   Users,
+  Sparkles,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -90,17 +89,17 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <CheckCircle className="h-5 w-5 text-burnt-orange-700" />
+            <Sparkles className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
-              Why Ancile?
+              About Ancile AI
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent mb-8">
             Why Ancile?
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             We don't adapt commercial solutions for government—we build AI
             specifically for mission-critical environments where others can't operate
           </p>
