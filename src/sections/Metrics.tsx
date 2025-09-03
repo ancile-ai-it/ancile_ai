@@ -103,12 +103,12 @@ const Metrics = () => {
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="group bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-slate-200 hover:border-slate-300 shadow-lg transform hover:-translate-y-1"
+              className="group bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2"
             >
               <div
-                className={`inline-flex p-3 rounded-xl bg-slate-100 mb-4 ${metric.color}`}
+                className={`relative mb-4 mx-auto w-fit p-3 bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 ${metric.color}`}
               >
-                <metric.icon className="h-6 w-6" />
+                <metric.icon className="h-6 w-6 text-white" />
               </div>
 
               <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent group-hover:from-burnt-orange-800 group-hover:to-slate-700 group-hover:scale-105 transition-all duration-300">

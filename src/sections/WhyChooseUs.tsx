@@ -155,11 +155,11 @@ const WhyChooseUs = () => {
               { number: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-white/60 backdrop-blur-lg px-6 py-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
-                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2">
+                <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2">
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2 group-hover:from-burnt-orange-900 group-hover:to-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                     {stat.number}
                   </div>
-                  <div className="text-sm text-gray-600 font-medium">
+                  <div className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
                     {stat.label}
                   </div>
                 </div>

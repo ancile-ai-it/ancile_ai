@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import {
+  ArrowLeft,
   ArrowRight,
   Brain,
   Rocket,
@@ -246,9 +247,10 @@ const Process = () => {
                 <button
                   onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
                   disabled={activeStep === 0}
-                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="px-4 py-2 bg-gradient-to-r from-gray-100 to-slate-100 hover:from-gray-200 hover:to-slate-200 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
                 >
-                  Previous
+                  <ArrowLeft className="h-4 w-4" />
+                  <span>Previous</span>
                 </button>
 
                 <div className="flex-1">
@@ -276,10 +278,10 @@ const Process = () => {
                     )
                   }
                   disabled={activeStep === processSteps.length - 1}
-                  className="px-4 py-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white rounded-lg hover:from-burnt-orange-800 hover:to-burnt-orange-900 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="px-4 py-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white rounded-lg hover:from-burnt-orange-800 hover:to-burnt-orange-900 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
                 >
-                  Next
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <span>Next</span>
+                  <ArrowRight className="h-4 w-4" />
                 </button>
               </div>
             </div>

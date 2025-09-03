@@ -151,7 +151,7 @@ const CallToAction = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="group bg-white/60 backdrop-blur-xl px-6 py-4 rounded-xl border border-slate-200 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white/60 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 hover:bg-white/80"
               >
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-1 group-hover:from-burnt-orange-900 group-hover:to-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                   {stat.number}
