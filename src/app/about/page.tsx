@@ -18,7 +18,7 @@ const AboutPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
-                SDVOSB Small Business
+                SDVO Small Business
               <br />
               <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-900 bg-clip-text text-transparent">
                 Government Experts

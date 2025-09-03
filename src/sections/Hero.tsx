@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-6 py-3 rounded-full border border-slate-300 shadow-lg">
             <Shield className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-800">
-              SDVOSB Small Business • AI Specialists • Mission-Focused
+              SDVO Small Business • AI Specialists • Mission-Focused
             </span>
           </div>
         </div>
