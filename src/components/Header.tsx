@@ -57,8 +57,8 @@ Message: ${formData.message}
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-900 p-3 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <Image src="/images/logo/ancileai_logo.png" alt="Ancile AI Logo" width={40} height={40} className="group-hover:scale-105 transition-transform duration-300" />
+            <div className="p-1">
+              <Image src="/images/logo/ancileai_logo.svg" alt="Ancile AI Logo" width={40} height={40} className="group-hover:scale-105 transition-transform duration-300" />
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-burnt-orange-900 to-burnt-orange-600 bg-clip-text text-transparent">Ancile AI</h1>
@@ -124,8 +124,8 @@ Message: ${formData.message}
             <div className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white p-6 rounded-t-2xl">
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
-                    <Image src="/images/logo/ancileai_logo.png" alt="Logo" width={24} height={24} />
+                  <div className="p-2">
+                    <Image src="/images/logo/ancileai_logo.svg" alt="Logo" width={24} height={24} />
                   </div>
                   <h3 className="text-xl font-bold">Partner With Us</h3>
                 </div>
