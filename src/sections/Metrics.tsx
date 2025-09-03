@@ -1,59 +1,59 @@
 "use client";
 
-import { TrendingUp, Award, Users, Shield, Target, Zap } from 'lucide-react';
+import { TrendingUp, Award, Users, Shield, Target, Zap } from "lucide-react";
 
 const metrics = [
   {
     icon: TrendingUp,
-    value: '98%',
-    label: 'Client Satisfaction',
-    description: 'Mission success rate',
-    color: 'text-green-500'
+    value: "98%",
+    label: "Client Satisfaction",
+    description: "Mission success rate",
+    color: "text-green-500",
   },
   {
     icon: Users,
-    value: '150+',
-    label: 'Government Agencies',
-    description: 'Served since 2018',
-    color: 'text-blue-500'
+    value: "150+",
+    label: "Government Agencies",
+    description: "Served since 2018",
+    color: "text-blue-500",
   },
   {
     icon: Award,
-    value: '50+',
-    label: 'AI Solutions',
-    description: 'Delivered & deployed',
-    color: 'text-purple-500'
+    value: "50+",
+    label: "AI Solutions",
+    description: "Delivered & deployed",
+    color: "text-purple-500",
   },
   {
     icon: Target,
-    value: '24/7',
-    label: 'Mission Support',
-    description: 'Round-the-clock coverage',
-    color: 'text-orange-500'
+    value: "24/7",
+    label: "Mission Support",
+    description: "Round-the-clock coverage",
+    color: "text-orange-500",
   },
   {
     icon: Shield,
-    value: 'TS/SCI',
-    label: 'Security Clearance',
-    description: 'Cleared consultants',
-    color: 'text-teal-500'
+    value: "TS/SCI",
+    label: "Cleared Personnel",
+    description: "Cleared consultants",
+    color: "text-teal-500",
   },
   {
     icon: Zap,
-    value: '25+',
-    label: 'AI Innovations',
-    description: 'Delivered solutions',
-    color: 'text-indigo-500'
-  }
+    value: "25+",
+    label: "AI Innovations",
+    description: "Delivered solutions",
+    color: "text-indigo-500",
+  },
 ];
 
 const achievements = [
-  'Former US Marine Corps & Air Force veterans on staff',
-  'Certified FedRAMP, FISMA, and NIST compliance expertise',
-  'Strategic partnerships with Google, OpenAI, and Anthropic',
-  'Proven track record in defense, intelligence, and civilian sectors',
-  'Rapid deployment capability: POC to production in 12-16 weeks',
-  'End-to-end AI lifecycle management and optimization'
+  "Former US Marine Corps & Air Force veterans on staff",
+  "Certified FedRAMP, FISMA, and NIST compliance expertise",
+  "Strategic partnerships with Google, OpenAI, and Anthropic",
+  "Proven track record in defense, intelligence, and civilian sectors",
+  "Rapid deployment capability: POC to production in 12-16 weeks",
+  "End-to-end AI lifecycle management and optimization",
 ];
 
 const Metrics = () => {
@@ -68,10 +68,13 @@ const Metrics = () => {
 
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+              backgroundSize: "50px 50px",
+            }}
+          />
         </div>
       </div>
 
@@ -80,7 +83,9 @@ const Metrics = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-lg px-4 py-2 rounded-full border border-slate-200 mb-8">
             <Award className="h-5 w-5 text-slate-600" />
-            <span className="text-sm font-medium text-slate-700">Trust & Performance</span>
+            <span className="text-sm font-medium text-slate-700">
+              Trust & Performance
+            </span>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
@@ -88,8 +93,8 @@ const Metrics = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Over 5 years of delivering mission-critical AI solutions with uncompromising quality,
-            security, and results that matter
+            Over 5 years of delivering mission-critical AI solutions with
+            uncompromising quality, security, and results that matter
           </p>
         </div>
 
@@ -100,7 +105,9 @@ const Metrics = () => {
               key={index}
               className="group bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-slate-200 hover:border-slate-300 shadow-lg transform hover:-translate-y-1"
             >
-              <div className={`inline-flex p-3 rounded-xl bg-slate-100 mb-4 ${metric.color}`}>
+              <div
+                className={`inline-flex p-3 rounded-xl bg-slate-100 mb-4 ${metric.color}`}
+              >
                 <metric.icon className="h-6 w-6" />
               </div>
 
@@ -124,10 +131,7 @@ const Metrics = () => {
           {/* Left Column */}
           <div className="space-y-4">
             {achievements.slice(0, 3).map((achievement, index) => (
-              <div
-                key={index}
-                className="flex items-start space-x-4 group"
-              >
+              <div key={index} className="flex items-start space-x-4 group">
                 <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
                 <p className="text-gray-700 group-hover:text-slate-800 transition-colors duration-300 leading-relaxed">
                   {achievement}
@@ -139,10 +143,7 @@ const Metrics = () => {
           {/* Right Column */}
           <div className="space-y-4">
             {achievements.slice(3).map((achievement, index) => (
-              <div
-                key={index}
-                className="flex items-start space-x-4 group"
-              >
+              <div key={index} className="flex items-start space-x-4 group">
                 <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-600 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
                 <p className="text-gray-700 group-hover:text-slate-800 transition-colors duration-300 leading-relaxed">
                   {achievement}
@@ -157,12 +158,16 @@ const Metrics = () => {
           <div className="inline-flex items-center space-x-4 bg-white/60 backdrop-blur-xl rounded-full px-8 py-4 border border-slate-200 shadow-lg">
             <div className="flex items-center space-x-2">
               <Shield className="h-5 w-5 text-slate-700" />
-              <span className="text-sm text-gray-700">Trusted by Government Leaders</span>
+              <span className="text-sm text-gray-700">
+                Trusted by Government Leaders
+              </span>
             </div>
             <div className="text-2xl">•</div>
             <div className="flex items-center space-x-2">
               <Target className="h-5 w-5 text-slate-700" />
-              <span className="text-sm text-gray-700">Mission-Critical Results</span>
+              <span className="text-sm text-gray-700">
+                Mission-Critical Results
+              </span>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowRight, CheckCircle, Shield, Sparkles, Zap } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { ArrowRight, CheckCircle, Shield, Sparkles, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -25,15 +25,25 @@ const Hero = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
         {/* Badge */}
-        <div className={`text-center mb-16 transform transition-all duration-700 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+        <div
+          className={`text-center mb-16 transform transition-all duration-700 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-6 py-3 rounded-full border border-slate-300 shadow-lg">
             <Shield className="h-5 w-5 text-slate-700" />
-            <span className="text-sm font-medium text-slate-800">Military-Veteran Led • AI Specialists • Mission-Focused</span>
+            <span className="text-sm font-medium text-slate-800">
+              Military-Veteran Led • AI Specialists • Mission-Focused
+            </span>
           </div>
         </div>
 
         {/* Main Headline */}
-        <div className={`text-center mb-20 relative transform transition-all duration-700 delay-200 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+        <div
+          className={`text-center mb-20 relative transform transition-all duration-700 delay-200 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
             Government-Grade
             <br />
@@ -43,14 +53,18 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
-            We deliver enterprise-grade AI capabilities that transform government operations,
-            enhance decision-making, and accelerate mission success with uncompromising security and compliance.
+            We deliver enterprise-grade AI capabilities that transform
+            government operations, enhance decision-making, and accelerate
+            mission success with uncompromising security and compliance.
           </p>
         </div>
 
-
         {/* Professional CTA Buttons */}
-        <div className={`text-center flex flex-col sm:flex-row gap-4 justify-center transform transition-all duration-700 delay-600 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+        <div
+          className={`text-center flex flex-col sm:flex-row gap-4 justify-center transform transition-all duration-700 delay-600 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
           <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center space-x-2">
             <span>Partner with Us Today</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

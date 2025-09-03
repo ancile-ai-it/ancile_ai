@@ -1,50 +1,71 @@
 "use client";
 
-import React from 'react';
-import { Shield, Globe, Building, Search, AlertTriangle, Target, ArrowRight } from 'lucide-react';
-import { useState } from 'react';
+import React from "react";
+import {
+  Shield,
+  Globe,
+  Building,
+  Search,
+  AlertTriangle,
+  Target,
+  ArrowRight,
+} from "lucide-react";
+import { useState } from "react";
 
 const industries = [
   {
     icon: Shield,
-    title: 'Defense & Intelligence',
-    description: 'Warfighter support and operational intelligence with AI-enhanced situational awareness',
-    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
-    hoverColor: 'hover:from-burnt-orange-700 hover:to-burnt-orange-900',
-    features: ['Operational Intelligence', 'Mission Planning', 'Risk Assessment']
+    title: "Defense & Intelligence",
+    description:
+      "Warfighter support and operational intelligence with AI-enhanced situational awareness",
+    gradient: "from-burnt-orange-600 to-burnt-orange-700",
+    hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-900",
+    features: [
+      "Operational Intelligence",
+      "Mission Planning",
+      "Risk Assessment",
+    ],
   },
   {
     icon: Globe,
-    title: 'Homeland Security',
-    description: 'Border protection and threat assessment with advanced surveillance capabilities',
-    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
-    hoverColor: 'hover:from-burnt-orange-800 hover:to-burnt-orange-700',
-    features: ['Surveillance Systems', 'Pattern Recognition', 'Incident Response']
+    title: "Homeland Security",
+    description:
+      "Border protection and threat assessment with advanced surveillance capabilities",
+    gradient: "from-burnt-orange-700 to-burnt-orange-600",
+    hoverColor: "hover:from-burnt-orange-800 hover:to-burnt-orange-700",
+    features: [
+      "Surveillance Systems",
+      "Pattern Recognition",
+      "Incident Response",
+    ],
   },
   {
     icon: Building,
-    title: 'Federal Civilian',
-    description: 'Citizen services and regulatory compliance with automated processing solutions',
-    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
-    hoverColor: 'hover:from-burnt-orange-700 hover:to-burnt-orange-800',
-    features: ['Process Automation', 'Data Analytics', 'Compliance Monitoring']
+    title: "Federal Civilian",
+    description:
+      "Citizen services and regulatory compliance with automated processing solutions",
+    gradient: "from-burnt-orange-600 to-burnt-orange-700",
+    hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-800",
+    features: ["Process Automation", "Data Analytics", "Compliance Monitoring"],
   },
   {
     icon: Search,
-    title: 'Law Enforcement',
-    description: 'Investigative support and crime analysis with predictive intelligence tools',
-    gradient: 'from-burnt-orange-700 to-burnt-orange-600',
-    hoverColor: 'hover:from-burnt-orange-800 hover:to-burnt-orange-700',
-    features: ['Crime Prediction', 'Evidence Analysis', 'Forensic Support']
+    title: "Law Enforcement",
+    description:
+      "Investigative support and crime analysis with predictive intelligence tools",
+    gradient: "from-burnt-orange-700 to-burnt-orange-600",
+    hoverColor: "hover:from-burnt-orange-800 hover:to-burnt-orange-700",
+    features: ["Crime Prediction", "Evidence Analysis", "Forensic Support"],
   },
   {
     icon: AlertTriangle,
-    title: 'Emergency Management',
-    description: 'Disaster response and resource coordination with real-time assessment systems',
-    gradient: 'from-burnt-orange-600 to-burnt-orange-700',
-    hoverColor: 'hover:from-burnt-orange-700 hover:to-burnt-orange-800',
-    features: ['Resource Allocation', 'Impact Assessment', 'Recovery Planning']
-  }
+    title: "Emergency Management",
+    description:
+      "Disaster response and resource coordination with real-time assessment systems",
+    gradient: "from-burnt-orange-600 to-burnt-orange-700",
+    hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-800",
+    features: ["Resource Allocation", "Impact Assessment", "Recovery Planning"],
+  },
 ];
 
 const Industries = () => {
@@ -56,8 +77,14 @@ const Industries = () => {
       <div className="absolute inset-0">
         {/* Pulsing orbs */}
         <div className="absolute top-20 left-20 w-40 h-40 bg-burnt-orange-500/10 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute top-40 right-32 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
-        <div className="absolute bottom-32 left-1/2 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}} />
+        <div
+          className="absolute top-40 right-32 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute bottom-32 left-1/2 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        />
 
         {/* Grid pattern */}
         <div className="absolute inset-0">
@@ -70,7 +97,9 @@ const Industries = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
             <Target className="h-5 w-5 text-slate-600" />
-            <span className="text-sm font-medium text-slate-700">Mission Areas</span>
+            <span className="text-sm font-medium text-slate-700">
+              Mission Areas
+            </span>
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
@@ -78,8 +107,8 @@ const Industries = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Specialized AI solutions for critical government missions and operations,
-            delivering mission impact at scale
+            Specialized AI solutions for critical government missions and
+            operations, delivering mission impact at scale
           </p>
         </div>
 
@@ -89,16 +118,20 @@ const Industries = () => {
             <div
               key={index}
               className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 ${
-                hoveredIndex === index ? 'scale-105' : ''
+                hoveredIndex === index ? "scale-105" : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Hover Glow Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl`}
+              />
 
               {/* Icon */}
-              <div className={`relative mb-6 mx-auto w-fit p-4 bg-gradient-to-br ${industry.gradient} ${industry.hoverColor} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+              <div
+                className={`relative mb-6 mx-auto w-fit p-4 bg-gradient-to-br ${industry.gradient} ${industry.hoverColor} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
+              >
                 <industry.icon className="h-8 w-8 text-white" />
               </div>
 
@@ -115,8 +148,13 @@ const Industries = () => {
               {/* Features List */}
               <div className="space-y-2 mb-6">
                 {industry.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center justify-center space-x-2">
-                    <div className={`w-1.5 h-1.5 bg-gradient-to-r ${industry.gradient} rounded-full`} />
+                  <div
+                    key={featureIndex}
+                    className="flex items-center justify-center space-x-2"
+                  >
+                    <div
+                      className={`w-1.5 h-1.5 bg-gradient-to-r ${industry.gradient} rounded-full`}
+                    />
                     <span className="text-xs text-gray-600">{feature}</span>
                   </div>
                 ))}
@@ -134,8 +172,12 @@ const Industries = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Mission?</h3>
-            <p className="text-gray-600 mb-6">Join government agencies delivering AI-powered solutions at scale</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Mission?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Join government agencies delivering AI-powered solutions at scale
+            </p>
             <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
               Start Your Transformation
             </button>
