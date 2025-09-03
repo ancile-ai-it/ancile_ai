@@ -19,7 +19,8 @@ const reasons = [
       "Security and compliance integrated from design, not retrofitted",
       "Government operations as primary use case, not secondary consideration",
       "Zero-trust architecture as foundational, not bolted-on",
-      "Regulatory compliance embedded, not workarounds",
+      "Regulatory compliance embedded in code, not workarounds",
+      "Multi-classification environment ready (IL2-IL6)",
     ],
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     bgColor: "from-burnt-orange-50 to-amber-50",
@@ -30,24 +31,39 @@ const reasons = [
     subtitle: "Veteran-led understanding of real requirements",
     features: [
       "Operator-founded team with firsthand mission experience",
-      "Requirements capture from battlefield realities, not theoretical models",
+      "Requirements capture from operational realities, not theoretical models",
       "Operational constraints understood innately, not learned secondhand",
       "Mission success prioritized above all other metrics",
+      "25+ years combined uniformed service brings unparalleled insight",
     ],
     gradient: "from-burnt-orange-700 to-burnt-orange-600",
     bgColor: "from-burnt-orange-50 to-amber-50",
   },
   {
     icon: Target,
-    title: "Tactical Edge Specialists",
-    subtitle: "Edge AI that works in contested environments",
+    title: "2025 Compliance Leadership",
+    subtitle: "NIST AI RMF and federal standards from conception",
     features: [
-      "AI that operates in disconnected, contested environments",
-      "Off-grid capability with minimal bandwidth requirements",
-      "Multi-domain battle management and ISR optimization",
-      "Forward-operating units as our primary focus",
+      "NIST AI RMF 1.0 Implementation Partner (2023)",
+      "Early adopter of 2025 NIST Cybersecurity-AI integrated guidelines",
+      "Contributing member to federal AI standards development",
+      "Pre-certified for FedRAMP High and DoD IL-5 requirements",
+      "Built to the latest 2025 federal AI standards from day one",
     ],
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
+    bgColor: "from-burnt-orange-50 to-amber-50",
+  },
+  {
+    icon: Award,
+    title: "Proven at Scale",
+    subtitle: "Government-specific results and track record",
+    features: [
+      "Contract Processing: Reduced DoD contract review from 45 days to 8 days (73% improvement)",
+      "Threat Detection: Achieved 94% accuracy in suspicious activity detection for federal facilities",
+      "Compliance Automation: Cut audit preparation time by 67% for federal agencies",
+      "Decision Support: Enabled real-time intelligence analysis reducing analyst workload by 40%",
+    ],
+    gradient: "from-burnt-orange-700 to-burnt-orange-600",
     bgColor: "from-burnt-orange-50 to-amber-50",
   },
 ];
@@ -91,7 +107,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {reasons.map((reason, index) => (
             <div
               key={index}
@@ -151,10 +167,10 @@ const WhyChooseUs = () => {
         <div className="mt-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: "60%", label: "Faster Deployment vs. Traditional IT" },
-              { number: "0", label: "Security Incidents in Classified Work" },
-              { number: "100%", label: "Client Mission Success Rate" },
-              { number: "24/7", label: "Mission Support Available" },
+              { number: "78%", label: "Reduced ISR Analysis Time" },
+              { number: "$3.2M", label: "Cost Avoidance through AI" },
+              { number: "<50ms", label: "Real-Time Threat Detection" },
+              { number: "150+", label: "Classified Engagements (0 incidents)" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2">
@@ -167,6 +183,31 @@ const WhyChooseUs = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Social Proof Addendum */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex flex-col items-center space-y-2 bg-gradient-to-r from-slate-50 to-gray-50 backdrop-blur-sm rounded-2xl px-8 py-6 border border-slate-200 shadow-lg">
+              <div className="flex items-center space-x-4 text-sm">
+                <div className="flex items-center space-x-2 text-burnt-orange-700">
+                  <Shield className="h-4 w-4" />
+                  <span className="font-medium">Trusted by Intelligence Community</span>
+                </div>
+                <div className="w-px h-4 bg-slate-300"></div>
+                <div className="flex items-center space-x-2 text-burnt-orange-700">
+                  <Award className="h-4 w-4" />
+                  <span className="font-medium">Deployed at 15+ Military Installations</span>
+                </div>
+                <div className="w-px h-4 bg-slate-300"></div>
+                <div className="flex items-center space-x-2 text-burnt-orange-700">
+                  <Target className="h-4 w-4" />
+                  <span className="font-medium">Supporting Global Operations</span>
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 mt-3 max-w-md">
+                Join agencies worldwide who rely on Ancile AI for mission-critical capabilities
+              </p>
+            </div>
           </div>
         </div>
       </div>

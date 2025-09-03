@@ -125,7 +125,7 @@ Message: ${formData.message}
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <div className="p-2">
-                    <Image src="/images/logo/ancileai_logo.svg" alt="Logo" width={24} height={24} />
+                    <Image src="/images/logo/ancileai_logo.svg" alt="Logo" width={24} height={24} className="brightness-0 invert" />
                   </div>
                   <h3 className="text-xl font-bold">Partner With Us</h3>
                 </div>

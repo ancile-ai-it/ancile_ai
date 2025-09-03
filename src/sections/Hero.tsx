@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CheckCircle, Shield, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-gray-50 to-white text-gray-900 overflow-hidden mb-8 min-h-screen flex items-center">
+    <section className="relative bg-gradient-to-br from-slate-50 via-gray-50 to-white text-gray-900 overflow-hidden py-24 min-h-screen flex items-center">
       {/* Professional Background */}
       <div className="absolute inset-0">
         {/* Subtle pattern */}
@@ -45,18 +45,46 @@ const Hero = () => {
           }`}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
-            Mission-Critical AI
+            Government AI That Actually
             <br />
             <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
-              That Works in Contested Environments
+              Works in Government Environments
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
-            Veteran-founded team delivering secure, mission-focused AI solutions
-            that work at the tactical edge—from proof-of-concept to production
-            in weeks, not years.
+            While others adapt commercial solutions for government use, we build AI specifically for mission-critical environments where failure isn't an option. Our veteran-founded team delivers AI systems that meet the rigorous requirements of defense, intelligence, and federal operations—from day one.
           </p>
+        </div>
+
+        {/* Key Differentiators */}
+        <div
+          className={`text-center mb-16 transform transition-all duration-700 delay-400 ${
+            isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <h3 className="text-sm font-bold text-slate-800 mb-2">NIST AI RMF Compliant</h3>
+              <p className="text-xs text-slate-600">Built to the latest 2025 federal AI standards from conception</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <h3 className="text-sm font-bold text-slate-800 mb-2">Mission-Critical Reliability</h3>
+              <p className="text-xs text-slate-600">99.9% uptime across classified and unclassified environments</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <h3 className="text-sm font-bold text-slate-800 mb-2">Veteran-Led Expertise</h3>
+              <p className="text-xs text-slate-600">Founded and staffed by operators who understand government workflows</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <h3 className="text-sm font-bold text-slate-800 mb-2">Security-First Design</h3>
+              <p className="text-xs text-slate-600">FedRAMP High, IL-5 ready architectures with zero compromise on performance</p>
+            </div>
+          </div>
         </div>
 
         {/* Professional CTA Buttons */}

@@ -15,7 +15,7 @@ const CallToAction = () => {
 
   useEffect(() => {
     // Generate particles only on client-side to avoid hydration mismatches
-    const generatedParticles: Particle[] = [...Array(30)].map((_, i) => ({
+    const generatedParticles: Particle[] = [...Array(30)].map(() => ({
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
       animationDelay: `${Math.random() * 3}s`,
@@ -64,18 +64,16 @@ const CallToAction = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
             Ready to Transform
             <br />
-            <span className="relative">
+            <span className="relative bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 bg-clip-text text-transparent">
               Your Mission?
-              <div className="absolute -inset-2 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 opacity-20 blur-lg rounded-lg" />
             </span>
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-            Join leading government agencies in their AI transformation journey.
-            Let's build your roadmap to excellence.
+            Partner with cleared professionals who understand your operational environment. Schedule a secure consultation or download our readiness assessment to evaluate your organization's AI maturity against NIST standards.
           </p>
         </div>
 
@@ -133,6 +131,60 @@ const CallToAction = () => {
                   <div className="flex items-center space-x-2">
                     <Shield className="h-4 w-4 text-burnt-orange-600" />
                     <span>Security-First Approach</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Secondary CTA */}
+          <div className="group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:bg-white/85 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 shadow-lg">
+            {/* Softer glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-600/20 to-slate-800/20 opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-2xl blur-xl" />
+
+            {/* Subtle decorative elements */}
+            <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-slate-50 to-gray-50 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500" />
+            <div className="absolute bottom-6 left-6 w-10 h-10 bg-gradient-to-br from-slate-100 to-gray-100 rounded-full opacity-15 group-hover:opacity-25 transition-opacity duration-500" />
+
+            <div className="relative">
+              {/* Header section */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="bg-gradient-to-br from-slate-600 to-slate-700 p-4 rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300">
+                  <Download className="h-12 w-12 text-white" />
+                </div>
+              </div>
+
+              {/* Enhanced title with underline effect */}
+              <div className="mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-slate-900 transition-colors duration-500">
+                  Download Government AI Readiness Assessment
+                </h3>
+                <div className="w-0 group-hover:w-24 h-1 bg-gradient-to-r from-slate-600 to-slate-700 transition-all duration-700" />
+              </div>
+
+              {/* Enhanced description with better spacing */}
+              <p className="text-lg text-gray-700 mb-10 leading-relaxed text-justify">
+                Self-evaluate your organization's AI maturity against NIST standards and government-specific requirements. Get personalized recommendations for your next steps in deploying mission-critical AI capabilities while maintaining the highest security standards.
+              </p>
+
+              {/* Enhanced CTA button with multiple interactive elements */}
+              <div className="space-y-4">
+                <button className="group/btn w-full bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-102 transform flex items-center justify-center space-x-2">
+                  <Download className="h-5 w-5" />
+                  <span>Download Free Assessment</span>
+                  <ArrowRight className="h-5 w-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </button>
+
+                {/* Secondary info */}
+                <div className="flex items-center justify-center space-x-6 text-sm text-slate-600">
+                  <div className="flex items-center space-x-2">
+                    <Sparkles className="h-4 w-4 text-slate-600" />
+                    <span>NIST Standards Evaluation</span>
+                  </div>
+                  <div className="w-px h-4 bg-slate-300"></div>
+                  <div className="flex items-center space-x-2">
+                    <Shield className="h-4 w-4 text-slate-600" />
+                    <span>Security-First Analysis</span>
                   </div>
                 </div>
               </div>

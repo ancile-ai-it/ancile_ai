@@ -12,6 +12,8 @@ import {
   Users,
   Code,
   Settings,
+  Shield,
+  TrendingUp,
 } from "lucide-react";
 
 const processSteps = [
@@ -22,8 +24,13 @@ const processSteps = [
     description:
       "Deep dive analysis of your current operations, pain points, and AI opportunities. We conduct comprehensive stakeholder interviews and data assessment to identify high-impact use cases.",
     whyMatters:
-      "Most AI projects fail because consultants don't understand the mission. Our veteran team brings deep operational experience that ensures we're solving the right problems, not just building technology.",
+      "Our Marine Corps and Air Force veteran team has lived these missions firsthand—we understand what actually works in operational environments, not just what looks good in PowerPoint.",
     duration: "1-2 weeks",
+    successMetrics: [
+      "Identified an average of 3 high-impact use cases per agency",
+    ],
+    riskMitigation: "Security assessment ensures no classified data exposure",
+    whatMakesItDifferent: "We interview operators, not just executives",
     deliverables: [
       "Mission Analysis Report",
       "AI Readiness Assessment",
@@ -35,10 +42,15 @@ const processSteps = [
     title: "Strategy & Planning",
     subtitle: "Define Your AI Roadmap",
     description:
-      "Develop comprehensive AI strategy aligned with your mission objectives. We create detailed implementation plans, resource requirements, and success metrics tailored to government procurement.",
+      "Develop comprehensive AI strategy aligned with your mission objectives. We create detailed execution plans, resource requirements, and mission success criteria tailored to government procurement.",
     whyMatters:
-      "We cut through procurement complexity and deliver clear, actionable roadmaps that get approved. No wasted time on theoretical exercises—only practical plans that work in government environments.",
+      "We navigate SEWP, CIO-SP3, and GSA schedules daily. No wasted cycles on proposals that won't get approved—we know what procurement offices need to see.",
     duration: "2-4 weeks",
+    successMetrics: [
+      "100% of our roadmaps have received procurement approval",
+    ],
+    riskMitigation: "Compliance review prevents costly rework",
+    whatMakesItDifferent: "Roadmaps written by people who've executed in government",
     deliverables: [
       "AI Strategy Roadmap",
       "Technical Architecture",
@@ -50,10 +62,15 @@ const processSteps = [
     title: "Rapid Prototyping",
     subtitle: "Build & Validate Solutions",
     description:
-      "Create secure proof-of-concept implementations with real data in 4-6 weeks. Active stakeholder engagement ensures solutions meet mission requirements and team buy-in.",
+      "Create secure proof-of-concept implementations with real data in 4-6 weeks. Active mission partner collaboration ensures solutions meet evolving mission requirements and team buy-in.",
     whyMatters:
-      "We prove value before asking for production investment. Government budgets are precious—our rapid prototyping builds confidence and stakeholder buy-in before committing to full implementation.",
+      "While enterprise consultants spend months on requirements documents, we build working solutions. Real results in weeks, not theoretical frameworks in months.",
     duration: "4-6 weeks",
+    successMetrics: [
+      "Average 40% improvement in target metrics during POC",
+    ],
+    riskMitigation: "Stakeholder validation reduces deployment risk",
+    whatMakesItDifferent: "Tested in environments that mirror your actual constraints",
     deliverables: [
       "Functional Prototype",
       "Performance Validation",
@@ -61,14 +78,19 @@ const processSteps = [
     ],
   },
   {
-    icon: CheckCircle,
+    icon: Shield,
     title: "Deployment & Scale",
     subtitle: "Production Implementation",
     description:
       "Full-scale deployment with comprehensive training, documentation, and transition to operations. We handle compliance, security clearances, and knowledge transfer.",
     whyMatters:
-      "Military-grade project management ensures on-time delivery. While others overrun budgets and schedules, we deliver when promised with the quality required for mission-critical operations.",
+      "Military-grade project management with TS/SCI cleared team ensures on-time delivery in secure environments. We've never had a security incident or missed a classified deadline.",
     duration: "8-16 weeks",
+    successMetrics: [
+      "Zero missed deadlines in classified environments",
+    ],
+    riskMitigation: "Phased rollout minimizes operational disruption",
+    whatMakesItDifferent: "Delivered by security-cleared engineers who understand your world",
     deliverables: [
       "Production Deployment",
       "Training Program",
@@ -82,13 +104,49 @@ const processSteps = [
     description:
       "Ongoing monitoring, performance optimization, and evolution of your AI solutions. 24/7 support with regular updates to maintain mission effectiveness.",
     whyMatters:
-      "AI isn't 'set and forget' in dynamic government environments. Our continuous support ensures your solutions evolve with mission requirements and maintain peak effectiveness.",
+      "Threats evolve, missions change, technology advances. Our 24/7 support ensures your AI capabilities stay ahead of the curve—because second place isn't an option in government operations.",
     duration: "Ongoing",
+    successMetrics: [
+      "99.9% uptime across all production systems",
+    ],
+    riskMitigation: "Continuous monitoring prevents mission degradation",
+    whatMakesItDifferent: "Maintained by a team that never leaves government work",
     deliverables: [
       "Performance Monitoring",
       "Regular Updates",
       "Continuous Support",
     ],
+  },
+];
+
+const timelineComparison = {
+  phases: [
+    {
+      name: "Total Time to Production",
+      traditional: "12-24 months",
+      ancileAI: "12-16 weeks",
+    },
+    {
+      name: "Security Integration",
+      traditional: "Retrofitted later",
+      ancileAI: "Built-in from day one",
+    },
+    {
+      name: "Team Access",
+      traditional: "Account managers",
+      ancileAI: "Direct to engineers",
+    },
+  ],
+};
+
+const clientQuotes = [
+  {
+    quote: "Finally, someone who understood our operational environment from day one",
+    author: "Intelligence Community Leader",
+  },
+  {
+    quote: "They delivered what they promised, when they promised it",
+    author: "Defense Program Manager",
   },
 ];
 
@@ -245,20 +303,61 @@ const Process = () => {
                 </span>
               </div>
 
-              <div className="space-y-2">
-                <h4 className="font-semibold text-gray-900 mb-3">
-                  Key Deliverables:
-                </h4>
-                {processSteps[activeStep].deliverables.map(
-                  (deliverable, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-900 rounded-full"></div>
-                      <span className="text-gray-700 text-sm">
-                        {deliverable}
-                      </span>
-                    </div>
-                  )
-                )}
+              <div className="space-y-6">
+                {/* Success Metrics */}
+                <div className="bg-gradient-to-r from-burnt-orange-50 to-burnt-orange-100 border border-burnt-orange-200 p-4 rounded-lg">
+                  <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center">
+                    <TrendingUp className="h-4 w-4 mr-2" />
+                    Mission Success Criteria
+                  </h4>
+                  {processSteps[activeStep].successMetrics.map(
+                    (metric, index) => (
+                      <div key={index} className="flex items-center space-x-3 mt-2">
+                        <div className="w-2 h-2 bg-burnt-orange-600 rounded-full"></div>
+                        <span className="text-gray-700 text-sm">
+                          {metric}
+                        </span>
+                      </div>
+                    )
+                  )}
+                </div>
+
+                {/* Risk Mitigation */}
+                <div className="bg-gradient-to-r from-burnt-orange-100 to-burnt-orange-200 border border-burnt-orange-300 p-4 rounded-lg">
+                  <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center">
+                    <Shield className="h-4 w-4 mr-2" />
+                    Risk Mitigation
+                  </h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {processSteps[activeStep].riskMitigation}
+                  </p>
+                </div>
+
+                {/* What Makes This Different */}
+                <div className="bg-gradient-to-r from-burnt-orange-100 to-burnt-orange-200 border border-burnt-orange-300 p-4 rounded-lg">
+                  <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide">
+                    What Makes This Different
+                  </h4>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {processSteps[activeStep].whatMakesItDifferent}
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-gray-900 mb-3">
+                    Key Deliverables:
+                  </h4>
+                  {processSteps[activeStep].deliverables.map(
+                    (deliverable, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-900 rounded-full"></div>
+                        <span className="text-gray-700 text-sm">
+                          {deliverable}
+                        </span>
+                      </div>
+                    )
+                  )}
+                </div>
               </div>
 
               {/* Navigation */}
@@ -313,6 +412,77 @@ const Process = () => {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Timeline Comparison Box */}
+        <div className="mt-16 bg-gradient-to-r from-slate-100 to-gray-100 rounded-2xl p-8 border border-slate-200 shadow-lg">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              How We Accelerate Mission Success
+            </h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Government budgets are precious and missions can't wait. Our streamlined approach delivers secure, compliant AI capabilities faster than traditional consultants.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow-sm">
+              <thead className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white">
+                <tr>
+                  <th className="p-4 text-left font-semibold">Phase</th>
+                  <th className="p-4 text-center font-semibold">Traditional Contractors</th>
+                  <th className="p-4 text-center font-semibold">Ancile AI</th>
+                </tr>
+              </thead>
+              <tbody>
+                {timelineComparison.phases.map((phase, index) => (
+                  <tr key={index} className="border-b border-slate-200 hover:bg-slate-50 transition-colors">
+                    <td className="p-4 font-medium text-gray-900">{phase.name}</td>
+                    <td className="p-4 text-center text-red-600 font-medium">{phase.traditional}</td>
+                    <td className="p-4 text-center text-burnt-orange-700 font-semibold bg-gradient-to-r from-burnt-orange-50 to-burnt-orange-100 rounded-lg mx-2">{phase.ancileAI}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Client Quotes */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Real Voices from Mission Operators
+            </h3>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              These voices from the field demonstrate our commitment to understanding and serving mission-critical operations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {clientQuotes.map((quote, index) => (
+              <div
+                key={index}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="mb-6">
+                  <svg
+                    className="h-8 w-8 text-burnt-orange-400 mb-4"
+                    fill="currentColor"
+                    viewBox="0 0 32 32"
+                  >
+                    <path d="M12 4l3 3v10l-3-3H4V4h8z" />
+                    <path d="M24 16l3 3v4l-3-3h-8v6h8l3 3V16h-6v8h-2v-8z" />
+                  </svg>
+                  <p className="text-gray-700 italic leading-relaxed text-lg">
+                    "{quote.quote}"
+                  </p>
+                </div>
+                <div className="text-sm text-gray-500 border-t pt-4">
+                  {quote.author}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -15,56 +15,45 @@ import { useState } from "react";
 const industries = [
   {
     icon: Shield,
-    title: "Defense & Intelligence",
+    title: "Real-Time ISR Analysis",
     description:
-      "Warfighter support and operational intelligence with AI-enhanced situational awareness",
+      "AI-powered intelligence, surveillance, and reconnaissance with automated threat detection and pattern recognition for enhanced situational awareness",
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-900",
     features: [
-      "Operational Intelligence",
-      "Mission Planning",
-      "Risk Assessment",
+      "Automated Threat Detection",
+      "Pattern Recognition",
+      "Enhanced Situational Awareness",
+      "Multi-Modal Sensor Fusion",
     ],
   },
   {
     icon: Globe,
-    title: "Homeland Security",
+    title: "Multi-Domain Battle Management",
     description:
-      "Border protection and threat assessment with advanced surveillance capabilities",
+      "Integrated AI command and control systems for land, sea, air, space, and cyber domains with real-time battlefield decision support",
     gradient: "from-burnt-orange-700 to-burnt-orange-600",
     hoverColor: "hover:from-burnt-orange-800 hover:to-burnt-orange-700",
     features: [
-      "Surveillance Systems",
-      "Pattern Recognition",
-      "Incident Response",
+      "Cross-Domain Integration",
+      "Real-Time Decision Support",
+      "Automated Resource Allocation",
+      "Joint Force Coordination",
     ],
   },
   {
     icon: Building,
-    title: "Federal Civilian",
+    title: "Predictive Logistics Optimization",
     description:
-      "Citizen services and regulatory compliance with automated processing solutions",
+      "AI-driven supply chain management and predictive maintenance systems that optimize inventory, reduce costs, and prevent equipment failures",
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-800",
-    features: ["Process Automation", "Data Analytics", "Compliance Monitoring"],
-  },
-  {
-    icon: Search,
-    title: "Law Enforcement",
-    description:
-      "Investigative support and crime analysis with predictive intelligence tools",
-    gradient: "from-burnt-orange-700 to-burnt-orange-600",
-    hoverColor: "hover:from-burnt-orange-800 hover:to-burnt-orange-700",
-    features: ["Crime Prediction", "Evidence Analysis", "Forensic Support"],
-  },
-  {
-    icon: AlertTriangle,
-    title: "Emergency Management",
-    description:
-      "Disaster response and resource coordination with real-time assessment systems",
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-800",
-    features: ["Resource Allocation", "Impact Assessment", "Recovery Planning"],
+    features: [
+      "Supply Chain Forecasting",
+      "Predictive Maintenance",
+      "Cost Reduction Analytics",
+      "Inventory Optimization",
+    ],
   },
 ];
 
@@ -113,7 +102,7 @@ const Industries = () => {
         </div>
 
         {/* Industries Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <div
               key={index}

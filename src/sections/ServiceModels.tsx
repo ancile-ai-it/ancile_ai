@@ -6,81 +6,63 @@ import {
   Cog,
   GraduationCap,
   Headphones,
-  ArrowRight,
   CheckCircle,
+  Shield,
 } from "lucide-react";
 import { useState } from "react";
 
-const models = [
+const technicalCapabilities = [
   {
     icon: Lightbulb,
-    title: "Strategic AI Consulting",
-    subtitle: "Executive-Level Strategy Development",
-    description:
-      "Executive-level AI strategy development with focus on mission impact and ROI optimization",
+    title: "Classified Network AI Deployment",
     features: [
-      "Enterprise Architecture Design",
-      "Technology Roadmap Planning",
+      "Deploy AI capabilities in air-gapped, classified environments with full security compliance",
+      "TEMPEST-compliant hardware configurations",
+      "Cross-domain solution integration",
+      "Red/Black network separation maintenance",
+      "Custom AI models for classified data processing",
     ],
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     bgColor: "from-burnt-orange-50 to-amber-50",
-    duration: "4-8 weeks",
   },
   {
     icon: Zap,
-    title: "Rapid Prototyping",
-    subtitle: "Secure Proof-of-Concept Development",
-    description:
-      "Secure proof-of-concept development in 4-6 weeks with active government stakeholder engagement",
+    title: "Multi-Domain Intelligence Fusion",
     features: [
-      "Security-First Development",
-      "Mission Validation Testing",
+      "Integrate intelligence from multiple sources and classification levels for comprehensive situational awareness",
+      "Multi-INT fusion (SIGINT, HUMINT, GEOINT, OSINT)",
+      "Classification-appropriate output generation",
+      "Real-time threat correlation and analysis",
+      "Automated intelligence reporting",
     ],
     gradient: "from-burnt-orange-700 to-burnt-orange-600",
     bgColor: "from-burnt-orange-50 to-amber-50",
-    duration: "4-6 weeks",
   },
   {
     icon: Cog,
-    title: "Full AI Implementation",
-    subtitle: "End-to-End Mission Deployment",
-    description:
-      "End-to-end mission-critical AI solution deployment with government procurement expertise",
+    title: "Mission-Critical Operations Support",
     features: [
-      "Secure Infrastructure Deployment",
-      "Stakeholder Training Programs",
+      "AI systems that support life-and-death decisions with military-grade reliability",
+      "Battlefield decision support systems",
+      "Predictive maintenance for critical systems",
+      "Automated threat response coordination",
+      "Mission planning optimization",
     ],
     gradient: "from-burnt-orange-600 to-burnt-orange-700",
     bgColor: "from-burnt-orange-50 to-amber-50",
-    duration: "12-24 weeks",
   },
   {
-    icon: Headphones,
-    title: "Managed AI Services",
-    subtitle: "Ongoing Support & Optimization",
-    description:
-      "24/7 operational support and continuous optimization for production AI systems",
+    icon: Shield,
+    title: "Federal Compliance & Risk Management",
     features: [
-      "Real-time Performance Monitoring",
-      "Continuous Model Improvement",
+      "Comprehensive AI governance meeting all federal requirements and audit standards",
+      "NIST AI RMF implementation and monitoring",
+      "Automated compliance reporting",
+      "Risk assessment and mitigation planning",
+      "Audit trail generation and maintenance",
     ],
     gradient: "from-burnt-orange-700 to-burnt-orange-600",
     bgColor: "from-burnt-orange-50 to-amber-50",
-    duration: "Ongoing",
-  },
-  {
-    icon: GraduationCap,
-    title: "Training & Enablement",
-    subtitle: "Comprehensive Capability Building",
-    description:
-      "Comprehensive capability building through workshops, certifications, and knowledge transfer",
-    features: [
-      "Custom Training Programs",
-      "AI Ethics & Bias Mitigation",
-    ],
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    bgColor: "from-burnt-orange-50 to-amber-50",
-    duration: "8-16 weeks",
   },
 ];
 
@@ -118,11 +100,105 @@ const ServiceModels = () => {
           </p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {models.map((model, index) => (
+        {/* Technical Capabilities Grid */}
+        <div className="grid grid-cols-2 gap-8 mb-16">
+          {technicalCapabilities.map((capability, index) => (
             <div
               key={index}
+              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 ${
+                hoveredCard === index ? "scale-105" : ""
+              }`}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              {/* Animated Background */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${capability.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
+              />
+
+              {/* Content Wrapper for Z-Index */}
+              <div className="relative z-10">
+                {/* Icon */}
+                <div
+                  className={`relative mb-6 mx-auto w-fit p-4 bg-gradient-to-br ${capability.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
+                >
+                  <capability.icon className="h-8 w-8 text-white" />
+                </div>
+
+                {/* Title */}
+                <div className="mb-6 text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
+                    {capability.title}
+                  </h3>
+                </div>
+
+                {/* Features */}
+                <div className="space-y-4">
+                  {capability.features.map((feature, featureIndex) => (
+                    <div
+                      key={featureIndex}
+                      className="flex items-start space-x-3 group/item"
+                    >
+                      <div
+                        className={`w-2.5 h-2.5 bg-gradient-to-r ${capability.gradient} rounded-full mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200`}
+                      ></div>
+                      <p className="text-gray-700 leading-relaxed text-sm group-hover/item:text-slate-800 transition-colors">
+                        {feature}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Services Section */}
+        <div className="text-center mb-12">
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
+            Flexible Engagement Models
+          </h3>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Flexible engagement models tailored to your mission requirements
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Lightbulb,
+              title: "Strategic AI Implementation",
+              subtitle: "Phase 1: Planning & Assessment",
+              description: "NIST AI RMF gap assessment and custom roadmaps for your operational requirements",
+              features: ["NIST AI RMF Gap Assessment", "Mission-Specific AI Strategy"],
+              gradient: "from-burnt-orange-600 to-burnt-orange-700",
+              bgColor: "from-burnt-orange-50 to-amber-50",
+              duration: "6-12 weeks",
+            },
+            {
+              icon: Zap,
+              title: "Rapid Prototyping & Deployment",
+              subtitle: "Phase 2: Proof of Concept",
+              description: "30-Day proof of concepts with agile development cycles and security validation",
+              features: ["30-Day Proof of Concepts", "Agile Development Cycles"],
+              gradient: "from-burnt-orange-700 to-burnt-orange-600",
+              bgColor: "from-burnt-orange-50 to-amber-50",
+              duration: "30 days",
+            },
+            {
+              icon: Cog,
+              title: "Full AI Implementation & Operations",
+              subtitle: "Phase 3: Production Deployment",
+              description: "End-to-end deployment through operational deployment with 24/7 mission support",
+              features: ["End-to-End Deployment", "24/7 Mission Support"],
+              gradient: "from-burnt-orange-600 to-burnt-orange-700",
+              bgColor: "from-burnt-orange-50 to-amber-50",
+              duration: "12-24 weeks",
+            },
+          ].map((service, index) => (
+            <div
+              key={index + technicalCapabilities.length}
               className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 flex flex-col ${
                 hoveredCard === index ? "scale-105" : ""
               }`}
@@ -131,83 +207,62 @@ const ServiceModels = () => {
             >
               {/* Animated Background */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${model.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
+                className={`absolute inset-0 bg-gradient-to-br ${service.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
               />
 
               {/* Content Wrapper for Z-Index */}
               <div className="relative z-10 flex flex-col h-full">
                 {/* Icon */}
                 <div
-                  className={`relative mb-6 mx-auto w-fit p-4 bg-gradient-to-br ${model.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
+                  className={`relative mb-4 mx-auto w-fit p-3 bg-gradient-to-br ${service.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
                 >
-                  <model.icon className="h-8 w-8 text-white" />
+                  <service.icon className="h-6 w-6 text-white" />
                 </div>
 
                 {/* Title with Subtitle */}
-                <div className="mb-4 flex-none">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
-                    {model.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors mb-3">
-                    {model.subtitle}
+                <div className="mb-3 flex-none text-center">
+                  <h4 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
+                    {service.title}
+                  </h4>
+                  <p className="text-xs text-gray-600 font-medium group-hover:text-slate-700 transition-colors mb-2">
+                    {service.subtitle}
                   </p>
 
                   {/* Duration Badge */}
-                  <div className="inline-flex items-center px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full mb-3">
+                  <div className="inline-flex items-center px-2 py-1 bg-white/60 backdrop-blur-sm rounded-full mb-2">
                     <span className="text-xs text-gray-600 font-medium">
-                      {model.duration}
+                      {service.duration}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-700 text-sm leading-relaxed mb-4 group-hover:text-slate-800 transition-colors">
-                    {model.description}
+                  <p className="text-gray-700 text-xs leading-relaxed mb-3 group-hover:text-slate-800 transition-colors">
+                    {service.description}
                   </p>
                 </div>
 
                 {/* Features - Aligned at bottom */}
-                <div className="space-y-3 mt-auto">
-                  {model.features.map((feature, featureIndex) => (
+                <div className="space-y-2 mt-auto">
+                  {service.features.map((feature, featureIndex) => (
                     <div
                       key={featureIndex}
-                      className="flex items-start space-x-3 group/item"
+                      className="flex items-center justify-center space-x-2 group/item"
                     >
                       <div
-                        className={`w-2 h-2 bg-gradient-to-r ${model.gradient} rounded-full mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200`}
+                        className={`w-1.5 h-1.5 bg-gradient-to-r ${service.gradient} rounded-full flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200`}
                       ></div>
-                      <p className="text-gray-700 leading-relaxed text-sm group-hover/item:text-slate-800 transition-colors">
+                      <span className="text-gray-700 text-xs group-hover/item:text-slate-800 transition-colors">
                         {feature}
-                      </p>
+                      </span>
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           ))}
         </div>
 
-        {/* Tech Stack Showcases */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { name: "AI/ML Platforms", tech: "OpenAI, Anthropic, Google" },
-            { name: "Cloud & Infra", tech: "AWS GovCloud, Azure Govt" },
-            { name: "Data Processing", tech: "ML Ops, MLOps, ETL" },
-            { name: "Security & Compliance", tech: "FedRAMP, FISMA, NIST" },
-          ].map((tech, index) => (
-            <div
-              key={index}
-              className="bg-white/60 backdrop-blur-xl rounded-xl p-6 text-center hover:bg-white/80 transition-all duration-300 border border-white/20 hover:border-slate-300 group"
-            >
-              <div className="text-sm text-slate-700 font-semibold mb-2 group-hover:text-slate-800 transition-colors">
-                {tech.name}
-              </div>
-              <div className="text-xs text-gray-600 group-hover:text-slate-700 transition-colors">
-                {tech.tech}
-              </div>
-            </div>
-          ))}
-        </div>
+      
       </div>
     </section>
   );

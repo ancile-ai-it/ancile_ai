@@ -5,55 +5,41 @@ import { TrendingUp, Award, Users, Shield, Target, Zap } from "lucide-react";
 const metrics = [
   {
     icon: TrendingUp,
-    value: "98%",
-    label: "Client Satisfaction",
-    description: "Mission success rate",
-    color: "text-green-500",
+    value: "99.8%",
+    label: "Mission Availability",
+    description: "Zero downtime during critical operations",
+    color: "text-burnt-orange-600",
   },
   {
     icon: Users,
-    value: "150+",
-    label: "Government Agencies",
-    description: "Served since 2018",
-    color: "text-blue-500",
+    value: "<50ms",
+    label: "Response Time",
+    description: "Real-time decision support when seconds matter",
+    color: "text-burnt-orange-700",
   },
   {
     icon: Award,
-    value: "50+",
-    label: "AI Solutions",
-    description: "Delivered & deployed",
-    color: "text-purple-500",
+    value: "100%",
+    label: "NIST Compliance",
+    description: "Full adherence to 2025 federal AI frameworks",
+    color: "text-burnt-orange-800",
   },
   {
     icon: Target,
     value: "24/7",
-    label: "Mission Support",
-    description: "Round-the-clock coverage",
-    color: "text-orange-500",
-  },
-  {
-    icon: Shield,
-    value: "TS/SCI",
-    label: "Cleared Personnel",
-    description: "Cleared consultants",
-    color: "text-teal-500",
-  },
-  {
-    icon: Zap,
-    value: "25+",
-    label: "AI Innovations",
-    description: "Delivered solutions",
-    color: "text-indigo-500",
+    label: "CONUS Support",
+    description: "Cleared personnel available around the clock",
+    color: "text-burnt-orange-500",
   },
 ];
 
 const achievements = [
-  "Former US Marine Corps & Air Force veterans on staff",
-  "Certified FedRAMP, FISMA, and NIST compliance expertise",
-  "Strategic partnerships with Google, OpenAI, and Anthropic",
-  "Proven track record in defense, intelligence, and civilian sectors",
-  "Rapid deployment capability: POC to production in 12-16 weeks",
-  "End-to-end AI lifecycle management and optimization",
+  "Former IC Personnel: 15+ years average experience in intelligence community",
+  "Active Security Clearances: TS/SCI cleared staff with current polygraphs",
+  "NIST Framework Contributors: Direct participation in federal AI standards development",
+  "Zero Security Incidents: Perfect record across classified and unclassified deployments",
+  "Strategic AI Partnerships: Certified implementation partners with Google, OpenAI, Anthropic",
+  "Mission-Critical Reliability: 99.9% uptime across production systems",
 ];
 
 const Metrics = () => {
@@ -99,7 +85,7 @@ const Metrics = () => {
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {metrics.map((metric, index) => (
             <div
               key={index}
