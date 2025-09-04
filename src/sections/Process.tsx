@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   ArrowLeft,
   ArrowRight,
   Brain,
   Rocket,
   Target,
-  CheckCircle,
   Clock,
-  Users,
-  Code,
   Settings,
   Shield,
   TrendingUp,
@@ -27,7 +25,7 @@ const processSteps = [
       "Our multi-branch veteran-led team has lived these missions firsthand-we understand what actually works in operational environments, not just what looks good in PowerPoint.",
     duration: "0-2 weeks",
     successMetrics: [
-      "Identified an average of 3 high-impact use cases per agency",
+      "Identified an average of 3 high-impact use-cases per AI initiative",
     ],
     riskMitigation: "Security assessment ensures no classified data exposure",
     whatMakesItDifferent: "We interview operators, not just executives",
@@ -405,11 +403,29 @@ const Process = () => {
             </div>
 
             {/* Visual */}
-            <div className="text-center">
-              <div className="w-64 h-64 mx-auto bg-gradient-to-br from-burnt-orange-50 to-amber-50 rounded-2xl flex items-center justify-center shadow-2xl">
-                {React.createElement(processSteps[activeStep].icon, {
-                  className: "h-24 w-24 text-slate-700",
-                })}
+            <div className="text-center mx-auto">
+              <div className="w-128 h-128 mx-auto">
+                {activeStep === 0 ? (
+                  <Image
+                    src="/images/process/ancile_ass.png"
+                    alt="Discovery & Assessment"
+                    width={512}
+                    height={512}
+                    className="rounded-xl"
+                  />
+                ) : activeStep === 1 ? (
+                  <Image
+                    src="/images/process/ancile_strategy3.png"
+                    alt="Strategy & Planning"
+                    width={512}
+                    height={512}
+                    className="rounded-xl"
+                  />
+                ) : (
+                  React.createElement(processSteps[activeStep].icon, {
+                    className: "h-48 w-48 text-slate-700",
+                  })
+                )}
               </div>
             </div>
           </div>
