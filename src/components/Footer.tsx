@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6 group">
@@ -56,51 +56,27 @@ const Footer = () => {
               Transforming critical missions with cutting-edge AI solutions and
               unparalleled domain expertise.
             </p>
+          </div>
 
-            {/* Secure Communications */}
-            <div className="mb-6">
-              <h5 className="text-sm font-semibold text-gray-900 mb-3">
-                Communications Available
-              </h5>
-              <div className="text-xs text-gray-600 space-y-1">
-                <div className="flex items-center space-x-2">
-                  <span>sales@ancile.io</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Enhanced Social Links */}
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
-              >
-                <Linkedin className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
-              </a>
-              <a
-                href="#"
-                className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
-              >
-                <Mail className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
-              </a>
+          {/* SBA Certifications */}
+          <div>
+            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+              SBA Certifications
+            </h4>
+            <div className="space-y-3">
+              <p className="text-xs text-gray-600">
+                Veteran-Owned Business Service-Disabled
+              </p>
+              <p className="text-xs text-gray-600">Veteran-Owned Business</p>
             </div>
           </div>
 
-          {/* Government Resources */}
+          {/* Contracting Resources */}
           <div>
             <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
               Contracting Resources
             </h4>
             <div className="space-y-3">
-              <div>
-                <p className="text-sm font-medium text-gray-900 mb-2">
-                  SBA Certifications:
-                </p>
-                <p className="text-xs text-gray-600">
-                  Veteran-Owned Business Service-Disabled
-                </p>
-                <p className="text-xs text-gray-600">Veteran-Owned Business</p>
-              </div>
               <div>
                 <p className="text-sm font-medium text-gray-900 mb-2">
                   Cage Code
@@ -115,6 +91,79 @@ const Footer = () => {
                   541511, 541512, 541513, 541519
                 </p>
               </div>
+              <div>
+                <p className="text-sm font-medium text-gray-900 mb-2">UEID:</p>
+                <p className="text-xs text-gray-600">Y465ERNPJ5M1</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact & Social */}
+          <div>
+            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+              Contact & Social
+            </h4>
+            <div>
+              <h5 className="text-sm font-semibold text-gray-900 mb-3">
+                Communications Available
+              </h5>
+              <div className="text-xs text-gray-600 mb-6">
+                <div className="flex items-center space-x-2">
+                  <a
+                    href="mailto:sales@ancile.io"
+                    className="text-gray-600 hover:text-burnt-orange-600 transition-colors"
+                  >
+                    sales@ancile.io
+                  </a>
+                </div>
+              </div>
+              <div className="flex space-x-4">
+                <a
+                  href="#"
+                  className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
+                >
+                  <Linkedin className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
+                </a>
+                <a
+                  href="mailto:sales@ancile.io"
+                  className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
+                >
+                  <Mail className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+              Quick Links
+            </h4>
+            <div className="space-y-3">
+              <a
+                href="/"
+                className="block text-sm text-gray-700 hover:text-burnt-orange-600 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                className="block text-sm text-gray-700 hover:text-burnt-orange-600 transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="#services"
+                className="block text-sm text-gray-700 hover:text-burnt-orange-600 transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
+                className="block text-sm text-gray-700 hover:text-burnt-orange-600 transition-colors"
+              >
+                Contact
+              </a>
             </div>
           </div>
         </div>
