@@ -73,10 +73,9 @@ const CallToAction = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-            Partner with cleared professionals who understand your operational
-            environment. Schedule a secure consultation or download our
-            readiness assessment to evaluate your organization's AI maturity
-            against NIST standards.
+            Partner with professionals who understand your operational
+            environment. Schedule a consultation to evaluate your organization's
+            AI initiatives.
           </p>
         </div>
 
@@ -127,11 +126,6 @@ const CallToAction = () => {
                 {/* Secondary info */}
                 <div className="flex items-center justify-center space-x-6 text-sm text-slate-600">
                   <div className="flex items-center space-x-2">
-                    <Download className="h-4 w-4 text-burnt-orange-600" />
-                    <span>Free Strategy Brief</span>
-                  </div>
-                  <div className="w-px h-4 bg-slate-300"></div>
-                  <div className="flex items-center space-x-2">
                     <Shield className="h-4 w-4 text-burnt-orange-600" />
                     <span>Security-First Approach</span>
                   </div>
@@ -143,10 +137,9 @@ const CallToAction = () => {
 
         {/* Stats */}
         <div className="mt-16 text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
             {[
-              { number: "50+", label: "AI Solutions Delivered" },
-              { number: "95%", label: "Client Satisfaction" },
+              { number: "25+", label: "AI Solutions Delivered" },
               { number: "24/7", label: "Mission Support" },
               { number: "100%", label: "Security Compliant" },
             ].map((stat, index) => (

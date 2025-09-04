@@ -25,9 +25,9 @@ const processSteps = [
       "Our multi-branch veteran-led team has lived these missions firsthand-we understand what actually works in operational environments, not just what looks good in PowerPoint.",
     duration: "0-2 weeks",
     successMetrics: [
-      "Identified an average of 3 high-impact use-cases per AI initiative",
+      "Identification of 3 high-impact use-cases per AI initiative",
     ],
-    riskMitigation: "Security assessment ensures no classified data exposure",
+    riskMitigation: "Establish data governence and lineage tracking",
     whatMakesItDifferent: "We interview operators, not just executives",
     deliverables: [
       "Mission Analysis Report",
@@ -40,9 +40,9 @@ const processSteps = [
     title: "Strategy & Planning",
     subtitle: "Define Your AI Roadmap",
     description:
-      "Develop comprehensive AI strategy aligned with your mission objectives. We create detailed execution plans, resource requirements, and mission success criteria tailored to government procurement.",
+      "Develop comprehensive AI strategies aligned with your mission objectives. We create detailed execution plans, resource requirements, and success criteria specifically tailored for government decision-making processes.",
     whyMatters:
-      "We navigate SEWP, CIO-SP3, and GSA schedules daily. No wasted cycles on proposals that won't get approved—we know what procurement offices need to see.",
+      "Strategic alignment ensures approval success. We understand what government offices need to see, eliminating wasted effort on proposals that won't get approved.",
     duration: "2-8 weeks",
     successMetrics: [
       "100% of our roadmaps have received procurement approval",
@@ -60,7 +60,7 @@ const processSteps = [
     title: "Rapid Prototyping",
     subtitle: "Build & Validate Solutions",
     description:
-      "Create secure proof-of-concept implementations with real data in 4-6 weeks. Active mission partner collaboration ensures solutions meet evolving mission requirements and team buy-in.",
+      "Create secure proof-of-concept implementations with real data in weeks not months. Active mission partner collaboration ensures solutions meet evolving mission requirements and team buy-in.",
     whyMatters:
       "While enterprise consultants spend months on requirements documents, we build working solutions. Real results in weeks, not theoretical frameworks in months.",
     duration: "8-12 weeks",
@@ -80,12 +80,12 @@ const processSteps = [
     title: "Deployment & Scale",
     subtitle: "Production Implementation",
     description:
-      "Full-scale deployment with comprehensive training, documentation, and transition to operations. We handle compliance, security clearances, and knowledge transfer.",
+      "Full-scale deployment with comprehensive training, documentation, and transition to operations.",
     whyMatters:
-      "Military-grade project management with TS/SCI cleared team ensures on-time delivery in secure environments. We've never had a security incident or missed a classified deadline.",
-    duration: "12-20 weeks",
+      "Military-grade project management with up to TS/SCI cleared team ensures on-time delivery in secure environments. We've never had a security incident or missed a classified deadline.",
+    duration: "12-20+ weeks",
     successMetrics: [
-      "Zero missed deadlines in classified environments",
+      "Mission-critical deadlines met without exception",
     ],
     riskMitigation: "Phased rollout minimizes operational disruption",
     whatMakesItDifferent: "Delivered by security-cleared engineers who understand your world",
@@ -102,13 +102,13 @@ const processSteps = [
     description:
       "Ongoing monitoring, performance optimization, and evolution of your AI solutions. 24/7 support with regular updates to maintain mission effectiveness.",
     whyMatters:
-      "Threats evolve, missions change, technology advances. Our 24/7 support ensures your AI capabilities stay ahead of the curve—because second place isn't an option in government operations.",
+      "Threats evolve, missions change, technology advances. Our 24/7 support ensures your AI capabilities stay ahead of the curve-because second place isn't an option in government operations.",
     duration: "Ongoing",
     successMetrics: [
       "99.9% uptime across all production systems",
     ],
     riskMitigation: "Continuous monitoring prevents mission degradation",
-    whatMakesItDifferent: "Maintained by a team that never leaves government work",
+    whatMakesItDifferent: "Maintained by a team committed to the mission",
     deliverables: [
       "Performance Monitoring",
       "Regular Updates",
@@ -121,8 +121,8 @@ const timelineComparison = {
   phases: [
     {
       name: "Total Time to Production",
-      traditional: "12-24 months",
-      ancileAI: "12-16 weeks",
+      traditional: "12-36+ months",
+      ancileAI: "12-20+ weeks",
     },
     {
       name: "Security Integration",
@@ -407,7 +407,7 @@ const Process = () => {
               <div className="w-128 h-128 mx-auto">
                 {activeStep === 0 ? (
                   <Image
-                    src="/images/process/ancile_ass.png"
+                    src="/images/process/ancile_pain.png"
                     alt="Discovery & Assessment"
                     width={512}
                     height={512}
@@ -415,8 +415,32 @@ const Process = () => {
                   />
                 ) : activeStep === 1 ? (
                   <Image
-                    src="/images/process/ancile_strategy3.png"
+                    src="/images/process/ancile_strat.png"
                     alt="Strategy & Planning"
+                    width={512}
+                    height={512}
+                    className="rounded-xl"
+                  />
+                ) : activeStep === 2 ? (
+                  <Image
+                    src="/images/process/ancile_proto.png"
+                    alt="Rapid Prototyping"
+                    width={512}
+                    height={512}
+                    className="rounded-xl"
+                  />
+                ) : activeStep === 3 ? (
+                  <Image
+                    src="/images/process/ancile_dep.png"
+                    alt="Deployment & Scale"
+                    width={512}
+                    height={512}
+                    className="rounded-xl"
+                  />
+                ) : activeStep === 4 ? (
+                  <Image
+                    src="/images/process/ancile_ops.png"
+                    alt="Optimization & Support"
                     width={512}
                     height={512}
                     className="rounded-xl"
@@ -438,7 +462,7 @@ const Process = () => {
               How We Accelerate Mission Success
             </h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Government budgets are precious and missions can't wait. Our streamlined approach delivers secure, compliant AI capabilities faster than traditional consultants.
+              We understand missions can't wait. Our streamlined approach delivers secure, compliant AI capabilities faster than traditional consultants.
             </p>
           </div>
 
@@ -464,7 +488,7 @@ const Process = () => {
           </div>
         </div>
 
-        {/* Client Quotes */}
+        {/* Client Quotes
         <div className="mt-16">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -500,7 +524,7 @@ const Process = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

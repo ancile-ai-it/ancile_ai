@@ -34,9 +34,9 @@ export default function Home() {
       <Hero />
       <WhyChooseUs />
       <Process />
-      <Metrics />
-      <ServiceModels />
-      <CaseStudies />
+      {/* <Metrics /> */}
+      {/* <ServiceModels /> */}
+      {/* <CaseStudies /> */}
       <Industries />
       <CallToAction />
       <Footer />

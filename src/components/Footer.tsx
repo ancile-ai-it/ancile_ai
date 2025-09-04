@@ -59,23 +59,12 @@ const Footer = () => {
 
             {/* Secure Communications */}
             <div className="mb-6">
-              <h5 className="text-sm font-semibold text-gray-900 mb-3">Secure Communications Available</h5>
+              <h5 className="text-sm font-semibold text-gray-900 mb-3">
+                Communications Available
+              </h5>
               <div className="text-xs text-gray-600 space-y-1">
                 <div className="flex items-center space-x-2">
-                  <Shield className="h-3 w-3" />
-                  <span>SIPR: sipr@ancile.ai</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Shield className="h-3 w-3" />
-                  <span>JWICS: jwics@ancile.ai</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Shield className="h-3 w-3" />
-                  <span>Unclass: contact@ancileai.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Shield className="h-3 w-3" />
-                  <span>Secure Phone: (855) AI-SECURE</span>
+                  <span>sales@ancile.io</span>
                 </div>
               </div>
             </div>
@@ -92,62 +81,39 @@ const Footer = () => {
                 href="#"
                 className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
               >
-                <Twitter className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
-              </a>
-              <a
-                href="#"
-                className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
-              >
                 <Mail className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
               </a>
             </div>
           </div>
 
-          {/* Certifications & Compliance */}
-          <div>
-            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
-              Certifications & Compliance
-            </h4>
-            <ul className="space-y-3">
-              {[
-                "NIST AI RMF Certified Implementation Partner",
-                "FedRAMP High Ready",
-                "DoD IL-5 Authorized",
-                "SOC 2 Type II Compliant",
-                "ISO 27001 Certified",
-                "CMMI Level 3 Accredited",
-              ].map((cert, index) => (
-                <li key={index} className="flex items-start space-x-2">
-                  <CheckCircle className="h-4 w-4 text-burnt-orange-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm leading-relaxed">
-                    {cert}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Government Resources */}
           <div>
             <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
-              Government Resources
+              Contracting Resources
             </h4>
             <div className="space-y-3">
               <div>
-                <p className="text-sm font-medium text-gray-900 mb-2">GSA Contract Vehicle:</p>
-                <p className="text-xs text-gray-600">[Contract Number]</p>
+                <p className="text-sm font-medium text-gray-900 mb-2">
+                  SBA Certifications:
+                </p>
+                <p className="text-xs text-gray-600">
+                  Veteran-Owned Business Service-Disabled
+                </p>
+                <p className="text-xs text-gray-600">Veteran-Owned Business</p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-900 mb-2">SEWP V Eligible Vendor</p>
-                <p className="text-xs text-gray-600">System Enhancement & Workload Planning</p>
+                <p className="text-sm font-medium text-gray-900 mb-2">
+                  Cage Code
+                </p>
+                <p className="text-xs text-gray-600">11BV7</p>
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-900 mb-2">CIO-SP3 Prime Contractor</p>
-                <p className="text-xs text-gray-600">Cloud Computing Solutions</p>
-              </div>
-              <div>
-                <p className="text-sm font-medium text-gray-900 mb-2">OASIS Small Business Pool 1</p>
-                <p className="text-xs text-gray-600">Mission Support Services</p>
+                <p className="text-sm font-medium text-gray-900 mb-2">
+                  NAICS Codes:
+                </p>
+                <p className="text-xs text-gray-600">
+                  541511, 541512, 541513, 541519
+                </p>
               </div>
             </div>
           </div>

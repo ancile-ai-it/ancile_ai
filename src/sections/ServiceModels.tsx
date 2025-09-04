@@ -91,7 +91,7 @@ const ServiceModels = () => {
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
-            Choose Your AI Journey Path
+            Choose Your AI Journey
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
