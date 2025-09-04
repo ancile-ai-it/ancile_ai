@@ -68,7 +68,7 @@ const reasons = [
 ];
 
 const WhyChooseUs = () => {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
     <section

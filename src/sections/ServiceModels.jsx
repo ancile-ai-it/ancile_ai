@@ -67,7 +67,7 @@ const technicalCapabilities = [
 ];
 
 const ServiceModels = () => {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden">

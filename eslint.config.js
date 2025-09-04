@@ -1,2 +1,1 @@
-// eslint.config.js
-module.exports = {};
+export default {};

@@ -3,19 +3,13 @@
 import { Shield, Sparkles, ArrowRight, Calendar, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
-interface Particle {
-  left: string;
-  top: string;
-  animationDelay: string;
-  animationDuration: string;
-}
 
 const CallToAction = () => {
-  const [particles, setParticles] = useState<Particle[]>([]);
+  const [particles, setParticles] = useState([]);
 
   useEffect(() => {
     // Generate particles only on client-side to avoid hydration mismatches
-    const generatedParticles: Particle[] = [...Array(30)].map(() => ({
+    const generatedParticles = [...Array(30)].map(() => ({
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
       animationDelay: `${Math.random() * 3}s`,

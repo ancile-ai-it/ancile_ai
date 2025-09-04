@@ -68,7 +68,7 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
     <section className="py-24 bg-gradient-to-br from-white via-slate-50 to-gray-50 relative overflow-hidden">
