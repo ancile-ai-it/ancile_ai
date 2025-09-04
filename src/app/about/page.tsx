@@ -17,7 +17,7 @@ const AboutPage = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
-              SDVO Small Business Government AI Experts
+              SDVOSB / Veteran-Owned Government AI Experts
             </h1>
 
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">

@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-6 py-3 rounded-full border border-slate-300 shadow-lg">
             <Shield className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-800">
-              SDVO Small Business • AI Specialists • Mission-Focused
+              SDVOSB • Veteran-Owned • Mission-Focused
             </span>
           </div>
         </div>
@@ -45,15 +45,22 @@ const Hero = () => {
           }`}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
-            Government AI That Actually
+            AI Solutions Built
             <br />
             <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
-              Works in Government Environments
+              For Government Operations
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
-            While others adapt commercial solutions for government use, we build AI specifically for mission-critical environments where failure isn't an option. Our veteran-founded team delivers AI systems that meet the rigorous requirements of defense, intelligence, and federal operations—from day one.
+            We engineer modern purpose-built edge, on-prem, and cloud AI
+            solutions using battle-tested open-source foundations, ensuring
+            transparency, security, and adaptability. Our agile development
+            approach rapidly transforms government use cases into prototypes and
+            deployed AI solutions. Our veteran-led team understands that
+            government operations present unique challenges and are committed to
+            delivering systems you can trust, modify, and control, meeting
+            federal requirements for deployment starting day one.
           </p>
         </div>
 
@@ -66,23 +73,41 @@ const Hero = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
               <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
-              <h3 className="text-sm font-bold text-slate-800 mb-2">NIST AI RMF Compliant</h3>
-              <p className="text-xs text-slate-600">Built to the latest 2025 federal AI standards from conception</p>
+              <h3 className="text-sm font-bold text-slate-800 mb-2">
+                NIST AI RMF Compliant
+              </h3>
+              <p className="text-xs text-slate-600">
+                Built to the latest 2025 federal AI standards from conception
+              </p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
               <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
-              <h3 className="text-sm font-bold text-slate-800 mb-2">Mission-Critical Reliability</h3>
-              <p className="text-xs text-slate-600">99.9% uptime across classified and unclassified environments</p>
+              <h3 className="text-sm font-bold text-slate-800 mb-2">
+                Mission-Critical Reliability
+              </h3>
+              <p className="text-xs text-slate-600">
+                99.9% uptime across classified and unclassified environments
+              </p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
               <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
-              <h3 className="text-sm font-bold text-slate-800 mb-2">Veteran-Led Expertise</h3>
-              <p className="text-xs text-slate-600">Founded and staffed by operators who understand government workflows</p>
+              <h3 className="text-sm font-bold text-slate-800 mb-2">
+                Veteran-Led Expertise
+              </h3>
+              <p className="text-xs text-slate-600">
+                Founded and staffed by operators who understand government
+                workflows
+              </p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
               <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
-              <h3 className="text-sm font-bold text-slate-800 mb-2">Security-First Design</h3>
-              <p className="text-xs text-slate-600">FedRAMP High, IL-5 ready architectures with zero compromise on performance</p>
+              <h3 className="text-sm font-bold text-slate-800 mb-2">
+                Security-First Design
+              </h3>
+              <p className="text-xs text-slate-600">
+                GSA and DoD complaint architectures with zero compromise on
+                performance
+              </p>
             </div>
           </div>
         </div>
@@ -96,10 +121,6 @@ const Hero = () => {
           <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center space-x-2">
             <span>Partner with Us Today</span>
             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-
-          <button className="bg-slate-100 hover:bg-slate-200 text-slate-800 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-slate-300 hover:border-slate-400 transition-all duration-300 shadow-lg hover:shadow-xl">
-            Schedule Strategy Session
           </button>
         </div>
       </div>
