@@ -4,52 +4,42 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { handleContactSubmission } from '../actions/contact';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // In a real application, you would send this to your email service
-    const emailSubject = 'Partnership Inquiry from ' + formData.name;
-    const emailBody = `
-Name: ${formData.name}
-Email: ${formData.email}
-Company: ${formData.company}
-Message: ${formData.message}
-    `.trim();
-
-    // For now, we'll just log it and show an alert
-    console.log('Email Subject:', emailSubject);
-    console.log('Email Body:', emailBody);
-
-    alert('Thank you for your inquiry! We will contact you soon.');
-    setIsContactModalOpen(false);
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
-    });
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const openModal = () => setIsContactModalOpen(true);
   const closeModal = () => setIsContactModalOpen(false);
+
+  const handleSubmit = async (formData) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const result = await handleContactSubmission(formData);
+
+      if (result?.success) {
+        setSubmitStatus('success');
+        // Close modal after 2 seconds on success
+        setTimeout(() => {
+          closeModal();
+          setSubmitStatus(null);
+        }, 2000);
+      } else {
+        setSubmitStatus('error');
+        console.error('Form submission error:', result?.error);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <header className="bg-white shadow-lg border-b border-slate-200 sticky top-0 z-50">
@@ -142,7 +132,11 @@ Message: ${formData.message}
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="p-6 space-y-5">
+            <form className="p-6 space-y-5" onSubmit={async (e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              await handleSubmit(formData);
+            }}>
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-2">
                   Full Name *
@@ -151,8 +145,7 @@ Message: ${formData.message}
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
+                  defaultValue=""
                   required
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
                   placeholder="Your full name"
@@ -167,8 +160,7 @@ Message: ${formData.message}
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
+                  defaultValue=""
                   required
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
                   placeholder="your.email@company.com"
@@ -183,11 +175,24 @@ Message: ${formData.message}
                   type="text"
                   id="company"
                   name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
+                  defaultValue=""
                   required
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
                   placeholder="Your organization"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-semibold text-gray-800 mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  defaultValue=""
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                  placeholder="+1 (555) 123-4567"
                 />
               </div>
 
@@ -198,27 +203,47 @@ Message: ${formData.message}
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
+                  defaultValue=""
                   rows={4}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm resize-none"
                   placeholder="Describe your AI initiative, timelines, and any specific requirements..."
                 />
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-xl text-green-800 text-sm">
+                  ✓ Thank you for your inquiry! We'll contact you within 24 hours.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-red-800 text-sm">
+                  ✗ Something went wrong. Please try again or contact us directly.
+                </div>
+              )}
+
               <div className="pt-4 flex space-x-3">
                 <button
                   type="button"
                   onClick={closeModal}
-                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium"
+                  disabled={isSubmitting}
+                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white py-3 px-6 rounded-xl hover:from-burnt-orange-800 hover:to-burnt-orange-900 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
+                  disabled={isSubmitting}
+                  className="flex-1 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white py-3 px-6 rounded-xl hover:from-burnt-orange-800 hover:to-burnt-orange-900 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
                 >
-                  Send Inquiry
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Inquiry'
+                  )}
                 </button>
               </div>
             </form>
