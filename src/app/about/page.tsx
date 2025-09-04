@@ -144,34 +144,36 @@ const AboutPage = () => {
             <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
               Our Core Values
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
+            <div className="grid md:grid-cols-3 gap-8 items-stretch">
+              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Security First
+                  </h3>
+                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
+                    Mission Assurance Through Security-by-Design
+                  </h4>
+                  <p className="text-gray-700 mb-4">
+                    Everything we build starts with security, compliance, and
+                    mission integrity as foundational principles—never as
+                    afterthoughts.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Security First
-                </h3>
-                <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
-                  Mission Assurance Through Security-by-Design
-                </h4>
-                <p className="text-gray-700 mb-4">
-                  Everything we build starts with security, compliance, and
-                  mission integrity as foundational principles—never as
-                  afterthoughts.
-                </p>
                 <div className="text-left">
                   <h5 className="font-semibold text-gray-900 mb-2">
                     Our Security Commitment:
@@ -193,33 +195,35 @@ const AboutPage = () => {
                 </div>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
+              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Innovation with Reliability
+                  </h3>
+                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
+                    Cutting-Edge Technology, Military-Grade Dependability
+                  </h4>
+                  <p className="text-gray-700 mb-4">
+                    We embrace the latest AI technologies while maintaining the
+                    99.9% reliability required for operations where failure means
+                    mission compromise.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Innovation with Reliability
-                </h3>
-                <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
-                  Cutting-Edge Technology, Military-Grade Dependability
-                </h4>
-                <p className="text-gray-700 mb-4">
-                  We embrace the latest AI technologies while maintaining the
-                  99.9% reliability required for operations where failure means
-                  mission compromise.
-                </p>
                 <div className="text-left">
                   <h5 className="font-semibold text-gray-900 mb-2">
                     Our Innovation Philosophy:
@@ -245,50 +249,53 @@ const AboutPage = () => {
                 </div>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zm-8 6a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
+              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zm-8 6a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Customer-Centric
+                  </h3>
+                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
+                    Mission-First Partners, Purpose-Built Solutions
+                  </h4>
+                  <p className="text-gray-700 mb-4">
+                    Our team leverages unmatched operational experience to deliver
+                    solutions that truly understand and address our customers'
+                    most critical challenges, combining deep technical expertise
+                    with intimate knowledge of mission requirements.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Operational Excellence
-                </h3>
-                <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
-                  Led by Operators, Built for Operators
-                </h4>
-                <p className="text-gray-700 mb-4">
-                  Our veteran-founded team brings unmatched operational
-                  experience, combining deep technical expertise with real-world
-                  understanding of government missions.
-                </p>
                 <div className="text-left">
                   <h5 className="font-semibold text-gray-900 mb-2">
-                    Our Team Advantage:
+                    Our Customer Advantage:
                   </h5>
                   <ul className="text-gray-700 text-sm space-y-1 list-disc list-inside">
                     <li>
-                      Average 15+ years intelligence community and military
-                      experience
-                    </li>
-                    <li>Active TS/SCI clearances with current polygraphs</li>
-                    <li>
-                      Direct experience in the missions we support—from
-                      battlefield operations to strategic intelligence
+                      Average 15+ years serving alongside our customers in
+                      intelligence and military operations
                     </li>
                     <li>
-                      Cultural understanding of government decision-making and
-                      risk management
+                      Firsthand experience in the exact missions our customers
+                      face—from tactical operations to strategic decision-making
+                    </li>
+                    <li>
+                      Deep cultural understanding of government workflows,
+                      enabling seamless integration and accelerated mission
+                      success
                     </li>
                   </ul>
                 </div>
@@ -382,155 +389,31 @@ const AboutPage = () => {
             </div>
           </section>
 
-          {/* Leadership Team */}
+          {/* Meet Our Founding Team */}
           <section className="mb-24">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
-              Leadership Team
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-xl border-2 border-slate-300 bg-slate-50 flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-10 h-10 text-slate-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Founder & CEO
-                </h3>
-                {/* <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">[Name]</h4> */}
-                {/* <p className="text-slate-700 font-medium mb-4">Former [Military Branch/Agency], [Rank/Position]</p> */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Having operated in environments where AI could mean the
-                  difference between mission success and failure, I founded
-                  Ancile AI to bridge the gap between technological possibility
-                  and operational reality.
-                </p>
-                <div className="text-left">
-                  <h5 className="font-semibold text-gray-900 mb-2">
-                    Background:
-                  </h5>
-                  <ul className="text-gray-700 text-sm space-y-1">
-                    <li>
-                      • years active duty military service with [specific
-                      specialization]
-                    </li>
-                    <li>
-                      • Former [specific role] with extensive experience in
-                      [relevant area]
-                    </li>
-                    <li>• Current TS/SCI clearance with [polygraph type]</li>
-                    <li>
-                      • Led AI implementation projects for [specific government
-                      agencies/missions]
-                    </li>
-                  </ul>
-                </div>
+            <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg">
+              <div className="text-center mb-8">
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+                  Meet Our Founding Team
+                </h2>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-xl border-2 border-slate-300 bg-slate-50 flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-10 h-10 text-slate-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Co-Founder & CDAIO
-                </h3>
-                {/* <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">[Name]</h4> */}
-                {/* <p className="text-slate-700 font-medium mb-4">Former [Military Branch/Agency], [Rank/Position]</p> */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Government AI isn't just about processing data faster—it's
-                  about making the right decision when national security hangs
-                  in the balance.
+              <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed space-y-6">
+                <p className="text-xl">
+                  Our founding team represents a powerhouse of combined expertise, bringing together decades of proven leadership across the most demanding sectors of modern technology—from the battlefields of cyber warfare to the boardrooms of Fortune 500 companies. Forged in military service, our founders developed advanced avionics systems, cyber defense platforms, and battlefield technologies where failure isn't an option, instilling an unwavering commitment to security-first thinking and operational excellence.
                 </p>
-                <div className="text-left">
-                  <h5 className="font-semibold text-gray-900 mb-2">
-                    Background:
-                  </h5>
-                  <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• years intelligence community experience</li>
-                    <li>
-                      • Former [specific intelligence role] specializing in
-                      [area]
-                    </li>
-                    <li>
-                      • Expert in classified system architecture and security
-                      protocols
-                    </li>
-                    <li>
-                      • Contributed to development of NIST AI Risk Management
-                      Framework
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-                <div className="w-20 h-20 rounded-xl border-2 border-slate-300 bg-slate-50 flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-10 h-10 text-slate-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Co-Founder & CTO
-                </h3>
-                {/* <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">[Name]</h4> */}
-                {/* <p className="text-slate-700 font-medium mb-4">Former [Military Branch], Systems Architect</p> */}
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  We don't just implement AI—we architect solutions that perform
-                  flawlessly in the world's most demanding operational
-                  environments.
+                <p>
+                  Following their military careers, the team ascended to senior technical leadership roles at premier defense contractors, groundbreaking startups, and global technology giants, architecting distributed systems powering critical infrastructure and engineering AI solutions processing real-time data at scale.
                 </p>
-                <div className="text-left">
-                  <h5 className="font-semibold text-gray-900 mb-2">
-                    Background:
-                  </h5>
-                  <ul className="text-gray-700 text-sm space-y-1">
-                    <li>• years building and maintaining classified systems</li>
-                    <li>
-                      • Former [specific technical role] with expertise in
-                      [technical area]
-                    </li>
-                    <li>
-                      • Led development of [specific relevant systems/projects]
-                    </li>
-                    <li>
-                      • Specialized in air-gapped network AI deployment and
-                      optimization
-                    </li>
-                  </ul>
-                </div>
+
+                <p>
+                  With advanced degrees spanning engineering, cryptography, robotics, and data science, they consistently bridge the gap between laboratory innovation and market reality—delivering everything from missile defense software protecting national assets to predictive maintenance systems preventing catastrophic failures.
+                </p>
+
+                <p>
+                  This unique convergence of military precision, academic rigor, and commercial success means your most complex challenges become our most compelling opportunities. When you work with our team, you're not just hiring consultants—you're partnering with battle-tested innovators who understand that in today's rapidly evolving landscape, the difference between leading and following often comes down to having the right expertise at the right moment.
+                </p>
               </div>
             </div>
           </section>
