@@ -1,4 +1,5 @@
-import * as React from 'react';
+
+import React from 'react';
 
 interface ContactEmailTemplateProps {
   name: string;
@@ -109,14 +110,14 @@ export function CustomerConfirmationTemplate({ name, company }: CustomerConfirma
 }
 
 // Styles (converted to inline styles for email compatibility)
-const emailContainer = {
+const emailContainer: React.CSSProperties = {
   fontFamily: 'Arial, sans-serif',
   maxWidth: '600px',
   margin: '0 auto',
   backgroundColor: '#ffffff',
 };
 
-const header = {
+const header: React.CSSProperties = {
   background: 'linear-gradient(to right, #d97706, #b45309)',
   padding: '40px 30px',
   textAlign: 'center',
@@ -193,7 +194,7 @@ const messageText = {
   color: '#374151',
 };
 
-const footer = {
+const footer: React.CSSProperties = {
   marginTop: '30px',
   paddingTop: '25px',
   borderTop: '2px solid #e2e8f0',
@@ -236,7 +237,7 @@ const confirmationContainer = {
   color: '#2563eb',
 };
 
-const confirmationTitle = {
+const confirmationTitle: React.CSSProperties = {
   textAlign: 'center',
 };
 
