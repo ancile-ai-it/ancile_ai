@@ -24,7 +24,7 @@ const processSteps = [
     description:
       "Deep dive analysis of your current operations, pain points, and AI opportunities. We conduct comprehensive stakeholder interviews and data assessment to identify high-impact use cases.",
     whyMatters:
-      "Our Marine Corps and Air Force veteran team has lived these missions firsthand—we understand what actually works in operational environments, not just what looks good in PowerPoint.",
+      "Our multi-branch veteran-led team has lived these missions firsthand-we understand what actually works in operational environments, not just what looks good in PowerPoint.",
     duration: "0-2 weeks",
     successMetrics: [
       "Identified an average of 3 high-impact use cases per agency",
@@ -45,7 +45,7 @@ const processSteps = [
       "Develop comprehensive AI strategy aligned with your mission objectives. We create detailed execution plans, resource requirements, and mission success criteria tailored to government procurement.",
     whyMatters:
       "We navigate SEWP, CIO-SP3, and GSA schedules daily. No wasted cycles on proposals that won't get approved—we know what procurement offices need to see.",
-    duration: "2-6 weeks",
+    duration: "2-8 weeks",
     successMetrics: [
       "100% of our roadmaps have received procurement approval",
     ],
@@ -65,7 +65,7 @@ const processSteps = [
       "Create secure proof-of-concept implementations with real data in 4-6 weeks. Active mission partner collaboration ensures solutions meet evolving mission requirements and team buy-in.",
     whyMatters:
       "While enterprise consultants spend months on requirements documents, we build working solutions. Real results in weeks, not theoretical frameworks in months.",
-    duration: "6-12 weeks",
+    duration: "8-12 weeks",
     successMetrics: [
       "Average 40% improvement in target metrics during POC",
     ],
@@ -85,7 +85,7 @@ const processSteps = [
       "Full-scale deployment with comprehensive training, documentation, and transition to operations. We handle compliance, security clearances, and knowledge transfer.",
     whyMatters:
       "Military-grade project management with TS/SCI cleared team ensures on-time delivery in secure environments. We've never had a security incident or missed a classified deadline.",
-    duration: "12-28 weeks",
+    duration: "12-20 weeks",
     successMetrics: [
       "Zero missed deadlines in classified environments",
     ],
@@ -305,7 +305,7 @@ const Process = () => {
 
               <div className="space-y-6">
                 {/* Success Metrics */}
-                <div className="bg-gradient-to-r from-burnt-orange-50 to-burnt-orange-100 border border-burnt-orange-200 p-4 rounded-lg">
+                <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
                   <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center">
                     <TrendingUp className="h-4 w-4 mr-2" />
                     Mission Success Criteria
@@ -323,7 +323,7 @@ const Process = () => {
                 </div>
 
                 {/* Risk Mitigation */}
-                <div className="bg-gradient-to-r from-burnt-orange-100 to-burnt-orange-200 border border-burnt-orange-300 p-4 rounded-lg">
+                <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
                   <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center">
                     <Shield className="h-4 w-4 mr-2" />
                     Risk Mitigation
@@ -334,7 +334,7 @@ const Process = () => {
                 </div>
 
                 {/* What Makes This Different */}
-                <div className="bg-gradient-to-r from-burnt-orange-100 to-burnt-orange-200 border border-burnt-orange-300 p-4 rounded-lg">
+                <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
                   <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide">
                     What Makes This Different
                   </h4>
