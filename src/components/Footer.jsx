@@ -88,7 +88,15 @@ const Footer = () => {
                   NAICS Codes:
                 </p>
                 <p className="text-xs text-gray-600">
-                  541511, 541512, 541513, 541519
+                  541511, 541512, 541519, 518210
+                </p>
+              </div>
+                     <div>
+                <p className="text-sm font-medium text-gray-900 mb-2">
+                  PCS Codes:
+                </p>
+                <p className="text-xs text-gray-600">
+                  DA01, DA10, 7A20, 7A21
                 </p>
               </div>
               <div>
