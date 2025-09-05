@@ -148,20 +148,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Professional CTA Buttons */}
-        <div
-          className={`text-center flex flex-col sm:flex-row gap-4 justify-center transform transition-all duration-700 delay-600 ${
-            isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center space-x-2"
-          >
-            <span>Partner with Us Today</span>
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
+        {/* Professional CTA Buttons removed */}
       </div>
 
       {/* Contact Modal */}
