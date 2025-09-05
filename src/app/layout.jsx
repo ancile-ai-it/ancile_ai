@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Ancile AI - Consulting & Solutions',
   description: 'Veteran-founded AI consulting firm specializing in advanced logistics solutions, generative AI planning, and government-focused AI implementations.',
+  icons: {
+    icon: '/images/logo/ancileai_logo.svg',
+  },
 }
 
 export default function RootLayout({
