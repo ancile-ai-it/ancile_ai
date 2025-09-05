@@ -119,7 +119,7 @@ const Footer = () => {
               </div>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/ancile-ai/"
                   className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
                 >
                   <Linkedin className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
