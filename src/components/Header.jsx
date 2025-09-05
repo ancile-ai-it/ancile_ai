@@ -18,53 +18,73 @@ const Header = () => {
     setIsContactModalOpen(false);
     setPhoneValue('');
     setValidationErrors({});
+    setPhoneError('');
     setSubmitStatus(null);
   };
 
   const [validationErrors, setValidationErrors] = useState({});
   const [phoneValue, setPhoneValue] = useState('');
 
-  // Phone number formatting function
+  // Phone number formatting function with validation
   const formatPhoneNumber = (value) => {
     // Remove all non-digit characters
     const digits = value.replace(/\D/g, '');
 
+    // Limit to 15 digits max
+    const limitedDigits = digits.slice(0, 15);
+
     // Format based on length
-    if (digits.length >= 10) {
+    if (limitedDigits.length >= 10) {
       // US format: (555) 123-4567
-      const areaCode = digits.slice(0, 3);
-      const prefix = digits.slice(3, 6);
-      const line = digits.slice(6, 10);
-      const extension = digits.slice(10);
+      const areaCode = limitedDigits.slice(0, 3);
+      const prefix = limitedDigits.slice(3, 6);
+      const line = limitedDigits.slice(6, 10);
+      const extension = limitedDigits.slice(10);
 
       let formatted = `(${areaCode}) ${prefix}-${line}`;
       if (extension) {
         formatted += ` ${extension}`;
       }
       return formatted;
-    } else if (digits.length >= 6) {
+    } else if (limitedDigits.length >= 6) {
       // Partial US format: (555) 123-456
-      const areaCode = digits.slice(0, 3);
-      const prefix = digits.slice(3, 6);
-      const line = digits.slice(6);
+      const areaCode = limitedDigits.slice(0, 3);
+      const prefix = limitedDigits.slice(3, 6);
+      const line = limitedDigits.slice(6);
       return `(${areaCode}) ${prefix}-${line}`;
-    } else if (digits.length >= 3) {
+    } else if (limitedDigits.length >= 3) {
       // Partial area code: (555) 123
-      const areaCode = digits.slice(0, 3);
-      const remaining = digits.slice(3);
+      const areaCode = limitedDigits.slice(0, 3);
+      const remaining = limitedDigits.slice(3);
       return `(${areaCode}) ${remaining}`;
-    } else if (digits.length > 0) {
+    } else if (limitedDigits.length > 0) {
       // Just area code: (555
-      return `(${digits}`;
+      return `(${limitedDigits}`;
     }
 
     return '';
   };
 
-  // Handle phone input changes with auto-formatting
+  // Phone validation state
+  const [phoneError, setPhoneError] = useState('');
+
+  // Handle phone input changes with auto-formatting and validation
   const handlePhoneChange = (e) => {
     const input = e.target.value;
     const formatted = formatPhoneNumber(input);
+
+    // Check digit count
+    const digitCount = input.replace(/\D/g, '').length;
+
+    if (digitCount > 15) {
+      setPhoneError('Phone number cannot exceed 15 digits');
+      return; // Don't update the value
+    } else if (digitCount > 0 && digitCount < 10) {
+      setPhoneError('Phone number must be at least 10 digits');
+    } else {
+      setPhoneError('');
+    }
+
     setPhoneValue(formatted);
   };
 
@@ -264,9 +284,14 @@ const Header = () => {
                   name="name"
                   defaultValue=""
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                  className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm ${
+                    validationErrors.name ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-200'
+                  }`}
                   placeholder="Your full name"
                 />
+                {validationErrors.name && (
+                  <p className="mt-1 text-sm text-red-600">{validationErrors.name}</p>
+                )}
               </div>
 
               <div>
@@ -279,9 +304,14 @@ const Header = () => {
                   name="email"
                   defaultValue=""
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                  className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm ${
+                    validationErrors.email ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-200'
+                  }`}
                   placeholder="your.email@company.com"
                 />
+                {validationErrors.email && (
+                  <p className="mt-1 text-sm text-red-600">{validationErrors.email}</p>
+                )}
               </div>
 
               <div>
@@ -294,9 +324,14 @@ const Header = () => {
                   name="company"
                   defaultValue=""
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                  className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm ${
+                    validationErrors.company ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-200'
+                  }`}
                   placeholder="Your organization"
                 />
+                {validationErrors.company && (
+                  <p className="mt-1 text-sm text-red-600">{validationErrors.company}</p>
+                )}
               </div>
 
               <div>
@@ -309,10 +344,15 @@ const Header = () => {
                   name="phone"
                   value={phoneValue}
                   onChange={handlePhoneChange}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
+                  className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm ${
+                    phoneError ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-200'
+                  }`}
                   placeholder="+1 (555) 123-4567"
                 />
-                {validationErrors.phone && (
+                {phoneError && (
+                  <p className="mt-1 text-sm text-red-600">{phoneError}</p>
+                )}
+                {validationErrors.phone && !phoneError && (
                   <p className="mt-1 text-sm text-red-600">{validationErrors.phone}</p>
                 )}
               </div>
@@ -327,9 +367,14 @@ const Header = () => {
                   defaultValue=""
                   rows={4}
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm resize-none"
+                  className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm resize-none ${
+                    validationErrors.message ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-200'
+                  }`}
                   placeholder="Describe your AI initiative, timelines, and any specific requirements..."
                 />
+                {validationErrors.message && (
+                  <p className="mt-1 text-sm text-red-600">{validationErrors.message}</p>
+                )}
               </div>
 
               {/* Status Messages */}
