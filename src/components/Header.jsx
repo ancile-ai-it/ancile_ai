@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { handleContactSubmission } from '../actions/contact';
+import { contactFormApiSchema as contactFormSchema } from '../lib/validation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,11 +14,104 @@ const Header = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const openModal = () => setIsContactModalOpen(true);
-  const closeModal = () => setIsContactModalOpen(false);
+  const closeModal = () => {
+    setIsContactModalOpen(false);
+    setPhoneValue('');
+    setValidationErrors({});
+    setSubmitStatus(null);
+  };
+
+  const [validationErrors, setValidationErrors] = useState({});
+  const [phoneValue, setPhoneValue] = useState('');
+
+  // Phone number formatting function
+  const formatPhoneNumber = (value) => {
+    // Remove all non-digit characters
+    const digits = value.replace(/\D/g, '');
+
+    // Format based on length
+    if (digits.length >= 10) {
+      // US format: (555) 123-4567
+      const areaCode = digits.slice(0, 3);
+      const prefix = digits.slice(3, 6);
+      const line = digits.slice(6, 10);
+      const extension = digits.slice(10);
+
+      let formatted = `(${areaCode}) ${prefix}-${line}`;
+      if (extension) {
+        formatted += ` ${extension}`;
+      }
+      return formatted;
+    } else if (digits.length >= 6) {
+      // Partial US format: (555) 123-456
+      const areaCode = digits.slice(0, 3);
+      const prefix = digits.slice(3, 6);
+      const line = digits.slice(6);
+      return `(${areaCode}) ${prefix}-${line}`;
+    } else if (digits.length >= 3) {
+      // Partial area code: (555) 123
+      const areaCode = digits.slice(0, 3);
+      const remaining = digits.slice(3);
+      return `(${areaCode}) ${remaining}`;
+    } else if (digits.length > 0) {
+      // Just area code: (555
+      return `(${digits}`;
+    }
+
+    return '';
+  };
+
+  // Handle phone input changes with auto-formatting
+  const handlePhoneChange = (e) => {
+    const input = e.target.value;
+    const formatted = formatPhoneNumber(input);
+    setPhoneValue(formatted);
+  };
 
   const handleSubmit = async (formData) => {
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setValidationErrors({});
+
+    // Get raw phone input
+    const rawPhone = formData.get('phone') || '';
+
+    // Preprocess phone number - add +1 if no country code is provided and it's 10 digits
+    let processedPhone = rawPhone;
+    if (rawPhone && !rawPhone.includes('+')) {
+      const digitsOnly = rawPhone.replace(/\D/g, '');
+      if (digitsOnly.length === 10) {
+        processedPhone = `+1 ${formatPhoneNumber(digitsOnly)}`;
+      }
+    }
+
+    // Convert FormData to object for Zod validation
+    const formDataObj = {
+      name: formData.get('name') || '',
+      email: formData.get('email') || '',
+      company: formData.get('company') || '',
+      phone: processedPhone || undefined,
+      message: formData.get('message') || undefined,
+    };
+
+    // Validate with Zod
+    const validationResult = contactFormSchema.safeParse(formDataObj);
+
+    if (!validationResult.success) {
+      const errors = validationResult.error.format();
+      const errorMessages = {};
+
+      // Extract error messages
+      if (errors.name?._errors?.[0]) errorMessages.name = errors.name._errors[0];
+      if (errors.email?._errors?.[0]) errorMessages.email = errors.email._errors[0];
+      if (errors.company?._errors?.[0]) errorMessages.company = errors.company._errors[0];
+      if (errors.phone?._errors?.[0]) errorMessages.phone = errors.phone._errors[0];
+      if (errors.message?._errors?.[0]) errorMessages.message = errors.message._errors[0];
+
+      setValidationErrors(errorMessages);
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const result = await handleContactSubmission(formData);
@@ -132,10 +226,33 @@ const Header = () => {
             </div>
 
             {/* Form */}
-            <form className="p-6 space-y-5" onSubmit={async (e) => {
+            <form className="p-6 space-y-5" onSubmit={(e) => {
+              console.log('Form submission started');
               e.preventDefault();
-              const formData = new FormData(e.target);
-              await handleSubmit(formData);
+
+              // Check form validity first
+              if (!e.target.checkValidity()) {
+                console.log('Form is not valid');
+                e.target.reportValidity();
+                return;
+              }
+
+              console.log('Form is valid, proceeding with submission');
+
+              const submitForm = async () => {
+                try {
+                  setIsSubmitting(true);
+                  const formData = new FormData(e.target);
+                  console.log('FormData created');
+                  await handleSubmit(formData);
+                } catch (error) {
+                  console.error('Form submission error:', error);
+                  setSubmitStatus('error');
+                  setIsSubmitting(false);
+                }
+              };
+
+              submitForm();
             }}>
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-2">
@@ -190,21 +307,26 @@ const Header = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  defaultValue=""
+                  value={phoneValue}
+                  onChange={handlePhoneChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm"
                   placeholder="+1 (555) 123-4567"
                 />
+                {validationErrors.phone && (
+                  <p className="mt-1 text-sm text-red-600">{validationErrors.phone}</p>
+                )}
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-2">
-                  Tell us about your project
+                  Tell us about your project *
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   defaultValue=""
                   rows={4}
+                  required
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50 backdrop-blur-sm resize-none"
                   placeholder="Describe your AI initiative, timelines, and any specific requirements..."
                 />
