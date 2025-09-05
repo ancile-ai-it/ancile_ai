@@ -72,7 +72,7 @@ export function generateCustomerConfirmationEmail(
                                 <div style="width: 16px; height: 16px; background-color: #10b981; border-radius: 50%; text-align: center; line-height: 16px; color: #ffffff; font-weight: bold; font-size: 10px;">2</div>
                               </td>
                               <td style="color: #4b5563; font-size: 15px; line-height: 1.5; font-family: Arial, sans-serif; padding-left: 12px;">
-                                An Ancile Co-Founder will connect with you through your preferred method of contact.
+                                An Ancile team will connect with you through your preferred method of contact.
                               </td>
                             </tr>
                           </table>
